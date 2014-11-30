@@ -1,0 +1,12 @@
+<relationType allors="1.0" id="e16b5b92-eaaf-47d2-8eb5-4343b55f3eca">
+  <associationType id="98fd8932-6093-4004-8173-3d8930ed45bd">
+    <isMany>true</isMany>
+    <objectType idref="804929af-0208-4384-a74d-17353963d105" />
+  </associationType>
+  <roleType id="5f0cd159-4aaa-4c82-b9e8-92ce8b1e6df0">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+    <pluralName>DerivedObjectTypes</pluralName>
+    <singularName>DerivedObjectType</singularName>
+  </roleType>
+</relationType>

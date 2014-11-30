@@ -1,0 +1,13 @@
+<relationType allors="1.0" id="4883b1bb-ce26-4417-b895-1c924cc5beb6">
+  <associationType id="b4a13e39-aa73-49d7-a955-3068d318a221">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <isIndexed>true</isIndexed>
+  <roleType id="fd69c498-7a71-415e-9e5f-9475de25d8a7">
+    <isMany>true</isMany>
+    <objectType idref="edf4fdb9-9fc9-4914-bd67-c781f9199f98" />
+    <pluralName>DerivedMethodTypes</pluralName>
+    <singularName>DerivedMethodType</singularName>
+  </roleType>
+</relationType>

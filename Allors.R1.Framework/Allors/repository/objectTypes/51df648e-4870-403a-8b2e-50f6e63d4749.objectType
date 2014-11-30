@@ -1,0 +1,5 @@
+<objectType allors="1.0" id="51df648e-4870-403a-8b2e-50f6e63d4749">
+  <namespace idref="b9640272-dfe2-45ec-9c6b-d7443a448c21" />
+  <pluralName>AssociationTypes</pluralName>
+  <singularName>AssociationType</singularName>
+</objectType>

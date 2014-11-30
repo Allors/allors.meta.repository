@@ -1,0 +1,11 @@
+<relationType allors="1.0" id="5b037e20-b168-4fd1-8b93-4faeb487b4d9">
+  <associationType id="5eaf3c03-ccc9-4879-b74d-d0c2c4b8b2d8">
+    <isMany>true</isMany>
+    <objectType idref="804929af-0208-4384-a74d-17353963d105" />
+  </associationType>
+  <roleType id="2514eb75-0f20-40b0-90ea-5276279382b4">
+    <objectType idref="804929af-0208-4384-a74d-17353963d105" />
+    <pluralName>UnitDomains</pluralName>
+    <singularName>UnitDomain</singularName>
+  </roleType>
+</relationType>

@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="492bf4cc-6f36-4d40-888f-f231746c56a2">
+  <associationType id="32c994cd-a39e-4056-9e52-f9a9e2a1b8f8">
+    <objectType idref="903d3eb5-dc70-4cb4-93b8-5a1d0899c949" />
+  </associationType>
+  <roleType id="65f8a333-1809-41c9-9647-0b48adbc93c0">
+    <objectType idref="ccd6f134-26de-4103-bff9-a37ec3e997a3" />
+    <pluralName>Precisions</pluralName>
+    <singularName>Precision</singularName>
+  </roleType>
+</relationType>

@@ -1,0 +1,6 @@
+<objectType allors="1.0" id="47bb2aad-ad9e-4789-82b4-c9594585b3da">
+  <isAbstract>true</isAbstract>
+  <namespace idref="b9640272-dfe2-45ec-9c6b-d7443a448c21" />
+  <pluralName>PropertyTypes</pluralName>
+  <singularName>PropertyType</singularName>
+</objectType>

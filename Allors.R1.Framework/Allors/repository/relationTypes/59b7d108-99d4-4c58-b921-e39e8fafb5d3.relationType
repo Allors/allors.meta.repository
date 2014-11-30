@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="59b7d108-99d4-4c58-b921-e39e8fafb5d3">
+  <associationType id="76445813-46cc-4eef-98d6-e2c1adc3a862">
+    <objectType idref="903d3eb5-dc70-4cb4-93b8-5a1d0899c949" />
+  </associationType>
+  <roleType id="b6dec1f3-b7a8-4cfd-8434-0de7e0a162f8">
+    <objectType idref="ccd6f134-26de-4103-bff9-a37ec3e997a3" />
+    <pluralName>Sizes</pluralName>
+    <singularName>Size</singularName>
+  </roleType>
+</relationType>

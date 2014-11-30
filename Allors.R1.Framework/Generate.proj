@@ -1,0 +1,11 @@
+<Project DefaultTargets="Generate" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask TaskName="Generate" AssemblyFile="..\external\allors\development\Allors.R1.Development.dll"/>
+
+  <Target Name="Generate">
+    <Generate Repository="Allors/repository"/>
+  </Target>
+
+</Project>
+
+

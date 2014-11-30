@@ -1,0 +1,11 @@
+<relationType allors="1.0" id="a03c2b32-1ce5-4534-be3e-7914c2a69a7f">
+  <associationType id="6eac0fab-4ccc-4275-b5b4-b9398728f077">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="5bdfd25b-9407-44d6-9cf5-794bda301096">
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+    <pluralName>DerivedExclusiveConcreteLeafClasses</pluralName>
+    <singularName>DerivedExclusiveConcreteLeafClass</singularName>
+  </roleType>
+</relationType>

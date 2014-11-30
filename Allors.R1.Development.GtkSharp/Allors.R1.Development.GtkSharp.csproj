@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{611C63BA-64DB-401B-9E16-C394055A37BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Allors.R1.Development.GtkSharp</RootNamespace>
+    <AssemblyName>Allors.R1.Development.GtkSharp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.Decompiler">
+      <HintPath>..\External\gtk\ICSharpCode.Decompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>..\External\gtk\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory.CSharp">
+      <HintPath>..\External\gtk\ICSharpCode.NRefactory.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mindscape.Raygun4Net">
+      <HintPath>..\External\gtk\Mindscape.Raygun4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Addins">
+      <HintPath>..\External\gtk\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Addins.Setup">
+      <HintPath>..\External\gtk\Mono.Addins.Setup.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.TextEditor">
+      <HintPath>..\External\gtk\Mono.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Xwt">
+      <HintPath>..\External\gtk\Xwt.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Core">
+      <HintPath>..\External\gtk\MonoDevelop.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Ide">
+      <HintPath>..\External\gtk\MonoDevelop.Ide.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\DependencyTextView.cs" />
+    <Compile Include="Controls\SuperDomainComboBox.cs" />
+    <Compile Include="Controls\SupertypeComboBox.cs" />
+    <Compile Include="Controls\TextComboBox.cs" />
+    <Compile Include="Controls\MetaComboBox.cs" />
+    <Compile Include="Controls\AbstractClassComboBox.cs" />
+    <Compile Include="Controls\MultiplicityComboBox.cs" />
+    <Compile Include="Controls\ObjectTypeComboBox.cs" />
+    <Compile Include="Controls\InterfaceList.cs" />
+    <Compile Include="Converters\SuperinterfacesConverter.cs" />
+    <Compile Include="Decorators\SuperDomainDecorator.cs" />
+    <Compile Include="Decorators\TemplateDecorator.cs" />
+    <Compile Include="Decorators\ObjectTypeDecorator.cs" />
+    <Compile Include="Decorators\RelationTypeDecorator.cs" />
+    <Compile Include="Decorators\DomainDecorator.cs" />
+    <Compile Include="Editors\InterfacesEditor.cs" />
+    <Compile Include="Editors\AbstractClassEditor.cs" />
+    <Compile Include="Editors\ObjectTypeEditor.cs" />
+    <Compile Include="Explorer\TemplatesNode.cs" />
+    <Compile Include="Explorer\TemplateNode.cs" />
+    <Compile Include="Explorer\SupertypeNode.cs" />
+    <Compile Include="Explorer\SuperDomainNode.cs" />
+    <Compile Include="Explorer\SupertypesNode.cs" />
+    <Compile Include="Explorer\SuperDomainsNode.cs" />
+    <Compile Include="Explorer\Node.cs" />
+    <Compile Include="Explorer\Nodes.cs" />
+    <Compile Include="Gtk\Form.cs" />
+    <Compile Include="Gtk\HtmlLabel.cs" />
+    <Compile Include="Gtk\ErrorMessage.cs" />
+    <Compile Include="Gtk\ListItem.cs" />
+    <Compile Include="Gtk\ListItems.cs" />
+    <Compile Include="Gtk\TreeNodes.cs" />
+    <Compile Include="Gtk\TreeNode.cs" />
+    <Compile Include="Icons.cs" />
+    <Compile Include="Validation\ErrorNode.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="PropertyDescriptors\InterfacesPropertyDescriptor.cs" />
+    <Compile Include="PropertyDescriptors\AbstractClassPropertyDescriptor.cs" />
+    <Compile Include="PropertyDescriptors\ObjectTypePropertyDescriptor.cs" />
+    <Compile Include="PropertyDescriptors\ReadOnlyPropertyDescriptor.cs" />
+    <Compile Include="PropertyDescriptors\PropertyDescriptorBase.cs" />
+    <Compile Include="Explorer\Tree.cs" />
+    <Compile Include="Explorer\Events\SelectedEventArgs.cs" />
+    <Compile Include="Explorer\RoleTypeNode.cs" />
+    <Compile Include="Explorer\ObjectTypeNode.cs" />
+    <Compile Include="Explorer\DomainNode.cs" />
+    <Compile Include="Explorer\RepositoryNode.cs" />
+    <Compile Include="Validation\Nodes.cs" />
+    <Compile Include="Validation\Node.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\Grid.cs" />
+    <Compile Include="Wizards\PullUpInheritanceWizard.cs" />
+    <Compile Include="Wizards\PullUpRelationTypeWizard.cs" />
+    <Compile Include="Wizards\PullUpObjectTypeWizard.cs" />
+    <Compile Include="Wizards\PushDownInheritanceWizard.cs" />
+    <Compile Include="Wizards\PushDownRelationTypeWizard.cs" />
+    <Compile Include="Wizards\PushDownObjectTypeWizard.cs" />
+    <Compile Include="Wizards\AddObjectTypeWizard.cs" />
+    <Compile Include="Wizards\AddRepositoryWizard.cs" />
+    <Compile Include="Wizards\AddRelationTypeWizard.cs" />
+    <Compile Include="Wizards\AddSuperDomainWizard.cs" />
+    <Compile Include="Wizards\AddTemplateWizard.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Allors.R1.Development.Winforms\Allors.R1.Development.Winforms.csproj">
+      <Project>{6BBD6F92-C321-4A5C-9F88-FC1E592386C7}</Project>
+      <Name>Allors.R1.Development.Winforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Allors.R1.Development\Allors.R1.Development.csproj">
+      <Project>{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}</Project>
+      <Name>Allors.R1.Development</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Allors.R1.Framework\Allors.R1.Framework.csproj">
+      <Project>{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}</Project>
+      <Name>Allors.R1.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\association.ico">
+      <Link>Icons\association.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\allors.ico">
+      <Link>Icons\allors.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\class.ico">
+      <Link>Icons\class.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\class-locked.ico">
+      <Link>Icons\class-locked.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\cluster2.ico">
+      <Link>Icons\cluster.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\domain.ico">
+      <Link>Icons\domain.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\domainenvironment.ico">
+      <Link>Icons\domainenvironment.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\except.ico">
+      <Link>Icons\except.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\extension.ico">
+      <Link>Icons\extension.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\filter.ico">
+      <Link>Icons\filter.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\folder-closed.ico">
+      <Link>Icons\folder-closed.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\folder-opened.ico">
+      <Link>Icons\folder-opened.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\interface.ico">
+      <Link>Icons\interface.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\interface-locked.ico">
+      <Link>Icons\interface-locked.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\intersect.ico">
+      <Link>Icons\intersect.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\method.ico">
+      <Link>Icons\method.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\method-locked.ico">
+      <Link>Icons\method-locked.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\misc1.ico">
+      <Link>Icons\misc1.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\misc2.ico">
+      <Link>Icons\misc2.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\namespace-locked.ico">
+      <Link>Icons\namespace-locked.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\predicate.ico">
+      <Link>Icons\predicate.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\role.ico">
+      <Link>Icons\role.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\union.ico">
+      <Link>Icons\union.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\namespace.ico">
+      <Link>Icons\namespace.ico</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Allors.R1.Development.Winforms\ico\role-locked.ico">
+      <Link>Icons\role-locked.ico</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+</Project>

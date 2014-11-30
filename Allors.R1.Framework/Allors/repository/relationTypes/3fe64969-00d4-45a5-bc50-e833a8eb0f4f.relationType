@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="3fe64969-00d4-45a5-bc50-e833a8eb0f4f">
+  <associationType id="f266971f-628e-428c-bd68-2232475c7350">
+    <objectType idref="c03575fa-2d84-4096-9c4d-93cf05d3c1de" />
+  </associationType>
+  <roleType id="b4c82c8b-1db2-4553-a7e0-0e737b7924c2">
+    <objectType idref="b5ee6cea-4e2b-498e-a5dd-24671d896477" />
+    <pluralName>AreDerived</pluralName>
+    <singularName>IsDerived</singularName>
+  </roleType>
+</relationType>

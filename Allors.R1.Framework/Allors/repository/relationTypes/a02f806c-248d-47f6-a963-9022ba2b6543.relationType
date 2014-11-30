@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="a02f806c-248d-47f6-a963-9022ba2b6543">
+  <associationType id="0762404a-f858-4d9d-a343-5745942e8cd0">
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="6932b7cd-0f24-46c1-a8ca-77fc7a3556fa">
+    <objectType idref="b5ee6cea-4e2b-498e-a5dd-24671d896477" />
+    <pluralName>AreUnits</pluralName>
+    <singularName>IsUnit</singularName>
+  </roleType>
+</relationType>

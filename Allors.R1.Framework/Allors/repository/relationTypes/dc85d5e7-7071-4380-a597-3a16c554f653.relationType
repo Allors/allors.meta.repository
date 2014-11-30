@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="dc85d5e7-7071-4380-a597-3a16c554f653">
+  <associationType id="dbae78d5-a9fc-49f6-9ec9-67be3ab11536">
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="d6228f21-6251-4956-9b37-46adc0461691">
+    <objectType idref="b5ee6cea-4e2b-498e-a5dd-24671d896477" />
+    <pluralName>AreAbstract</pluralName>
+    <singularName>IsAbstract</singularName>
+  </roleType>
+</relationType>

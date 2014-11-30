@@ -1,0 +1,87 @@
+group AllorsCSharpUml;
+
+TemplateId() ::= <<FA2E53B4-915D-4227-8571-456FC8E04DB0>>
+TemplateName() ::= <<Allors C# Uml>>
+TemplateVersion() ::= <<1.0.19>>
+TemplateAllors() ::= <<1.0>>
+TemplateConfiguration(domain,settings) ::= <<
+$! 
+Copyright 2002-2013 Allors bvba.
+
+Dual Licensed under
+  a) the Lesser General Public Licence v3 (LGPL)
+  b) the Allors License
+
+The LGPL License is included in the file lgpl.txt.
+The Allors License is an addendum to your contract.
+
+Allors Platform is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+For more information visit http://www.allors.com/legal
+!$
+<generations>
+	<generation template="domain" output="$domain.name$.g.cs"/> 
+</generations>
+>>
+
+domain(domain,settings) ::= <<
+namespace $namespace()$
+{
+$domain.CompositeObjectTypes:{objectType|$class(domain=domain,objectType=objectType)$}$
+}
+>>
+
+class(domain,objectType) ::= <<
+
+	public interface $objectType.Name$ $if(objectType.ExistDirectSupertypes)$ : $first([objectType.DirectSupertypes]):{it | $it.Name$}$$rest([objectType.DirectSupertypes]):{it | , $it.Name$}$ $endif$
+	{
+		$objectType.AssociationTypesWhereObjectType:{associationType|$classRoleType(relationType=associationType.RelationType,associationType=associationType,roleType=associationType.RoleType)$}$
+	}
+>>
+
+classRoleType(relationType,associationType,roleType) ::= <<
+$if(roleType.IsOne)$
+			$if(!relationType.IsDerived)$$endif$$name(roleType.ObjectType)$ $roleType.HierarchySingularName${set;}
+$else$
+			$if(!relationType.IsDerived)$$endif$$name(roleType.ObjectType)$ $roleType.HierarchyPluralName${set;}
+$endif$
+>>
+
+name(objectType) ::= <%
+$if(objectType.IsBinary)$
+	byte[]
+$elseif(objectType.IsBoolean)$
+	bool
+$elseif(objectType.IsDate)$
+	global::System.DateTime?
+$elseif(objectType.IsDateTime)$
+	global::System.DateTime?
+$elseif(objectType.IsDecimal)$
+	decimal
+$elseif(objectType.IsDouble)$
+	double
+$elseif(objectType.IsInteger)$
+	int
+$elseif(objectType.IsLong)$
+	long
+$elseif(objectType.IsString)$
+	string
+$elseif(objectType.IsUnique)$
+	global::System.Guid?
+$else$
+	$objectType.SingularName$
+$endif$
+%>
+
+namespace() ::= <%
+$if(settings.existAllors)$
+	$if(settings.allors.ExistNamespace)$
+		$settings.allors.namespace$
+	$endif$
+$else$
+	Uml
+$endif$
+%>

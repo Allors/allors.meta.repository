@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="b8def1db-3539-4973-a896-389725af87e3">
+  <associationType id="f5438e63-c110-4bff-9a78-98935a399a4e">
+    <objectType idref="c03575fa-2d84-4096-9c4d-93cf05d3c1de" />
+  </associationType>
+  <roleType id="614aec93-3acb-4988-8bfc-eb3eeaf47aff">
+    <objectType idref="b5ee6cea-4e2b-498e-a5dd-24671d896477" />
+    <pluralName>AreIndexed</pluralName>
+    <singularName>IsIndexed</singularName>
+  </roleType>
+</relationType>

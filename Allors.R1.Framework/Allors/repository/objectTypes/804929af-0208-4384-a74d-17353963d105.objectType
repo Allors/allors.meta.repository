@@ -1,0 +1,5 @@
+<objectType allors="1.0" id="804929af-0208-4384-a74d-17353963d105">
+  <namespace idref="b9640272-dfe2-45ec-9c6b-d7443a448c21" />
+  <pluralName>Domains</pluralName>
+  <singularName>Domain</singularName>
+</objectType>

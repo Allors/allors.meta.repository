@@ -1,0 +1,19 @@
+<Project DefaultTargets="Merge" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask TaskName="Merge" AssemblyFile="..\bin\Debug\Allors.R1.Development.dll"/>
+ 
+  <Target Name="Merge">
+    <ItemGroup>
+      <InputDirectories Include="1"/>
+      <InputDirectories Include="2"/>
+      <InputDirectories Include="3"/>
+      <InputDirectories Include="4"/>
+    </ItemGroup>
+    
+    <Merge InputDirectories="@(InputDirectories)" OutputDirectory="."/>
+
+  </Target>
+
+</Project>
+
+

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProjectGuid>{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Allors.R1.Framework</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Allors.R1</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>Allors.Framework.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoWarn>1591</NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Allors\output\EmbeddedPartial\AssociationType.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\Domain.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\Inheritance.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\MetaObject.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\MethodType.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\ObjectType.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\OperandType.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\PropertyType.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\RelationType.allors.g.cs" />
+    <Compile Include="Allors\output\EmbeddedPartial\RoleType.allors.g.cs" />
+    <Compile Include="Allors\output\Embedded\AllorsR1Framework.g.cs" />
+    <Compile Include="Allors\output\Embedded\AssociationType.g.cs" />
+    <Compile Include="Allors\output\Embedded\Domain.g.cs" />
+    <Compile Include="Allors\output\Embedded\Inheritance.g.cs" />
+    <Compile Include="Allors\output\Embedded\MetaObject.g.cs" />
+    <Compile Include="Allors\output\Embedded\MethodType.g.cs" />
+    <Compile Include="Allors\output\Embedded\ObjectType.g.cs" />
+    <Compile Include="Allors\output\Embedded\OperandType.g.cs" />
+    <Compile Include="Allors\output\Embedded\PropertyType.g.cs" />
+    <Compile Include="Allors\output\Embedded\RelationType.g.cs" />
+    <Compile Include="Allors\output\Embedded\RoleType.g.cs" />
+    <Compile Include="ExtentT.cs" />
+    <Compile Include="IWorkspaceFactory.cs" />
+    <Content Include="Framework.Exclude.xml" />
+    <Compile Include="Extent.cs" />
+    <Compile Include="IObjectFactory.cs" />
+    <Compile Include="Meta\IObjectTypeExtension.cs" />
+    <Compile Include="Meta\IDomainExtension.cs" />
+    <Compile Include="Meta\Events\MetaObjectDeletedEventArgs.cs" />
+    <Compile Include="Meta\PropertyType.cs" />
+    <Compile Include="Meta\ValidationKind.cs" />
+    <Compile Include="Sort.cs" />
+    <Compile Include="SortDirection.cs" />
+    <Compile Include="Meta\MetaObject.cs" />
+    <Compile Include="Meta\MethodType.cs" />
+    <Compile Include="Meta\OperandType.cs" />
+    <Compile Include="ICompositePredicate.cs" />
+    <Compile Include="IObject.cs" />
+    <Compile Include="IPopulation.cs" />
+    <Compile Include="ISession.cs" />
+    <Compile Include="IStrategy.cs" />
+    <Compile Include="Meta\AssociationType.cs" />
+    <Compile Include="Meta\Domain.cs" />
+    <Compile Include="Meta\Events\MetaObjectChangedEventArgs.cs" />
+    <Compile Include="Meta\Inheritance.cs" />
+    <Compile Include="Meta\ObjectType.cs" />
+    <Compile Include="Meta\RelationType.cs" />
+    <Compile Include="Meta\RoleType.cs" />
+    <Compile Include="Meta\UnitTypeIds.cs" />
+    <Compile Include="Meta\UnitTypeTags.cs" />
+    <Compile Include="Meta\ValidationError.cs" />
+    <Compile Include="Meta\ValidationLog.cs" />
+    <Compile Include="ObjectFactory.cs" />
+    <Compile Include="ObjectBase.cs" />
+    <Compile Include="ObjectId.cs" />
+    <Compile Include="ObjectIdInteger.cs" />
+    <Compile Include="ObjectIdLong.cs" />
+    <Compile Include="ObjectNotLoadedEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IDatabaseSession.cs" />
+    <Compile Include="IDatabase.cs" />
+    <Compile Include="RelationNotLoadedEventArgs.cs" />
+    <Compile Include="SessionCommittedEventArgs.cs" />
+    <Compile Include="SessionCommittingEventArgs.cs" />
+    <Compile Include="SessionCreatedEventArgs.cs" />
+    <Compile Include="SessionRolledBackEventArgs.cs" />
+    <Compile Include="SessionRollingBackEventArgs.cs" />
+    <Compile Include="IChangeSet.cs" />
+    <Compile Include="IConflict.cs" />
+    <Compile Include="IWorkspace.cs" />
+    <Compile Include="IWorkspaceSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagrams\Population.cd" />
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

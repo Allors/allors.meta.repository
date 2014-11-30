@@ -1,0 +1,6 @@
+<objectType allors="1.0" id="7794a50c-a2ba-45cb-a8a7-9e8091d313cb">
+  <isAbstract>true</isAbstract>
+  <namespace idref="b9640272-dfe2-45ec-9c6b-d7443a448c21" />
+  <pluralName>MetaObjects</pluralName>
+  <singularName>MetaObject</singularName>
+</objectType>

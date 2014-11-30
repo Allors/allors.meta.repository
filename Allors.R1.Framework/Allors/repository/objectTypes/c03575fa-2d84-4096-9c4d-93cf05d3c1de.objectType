@@ -1,0 +1,5 @@
+<objectType allors="1.0" id="c03575fa-2d84-4096-9c4d-93cf05d3c1de">
+  <namespace idref="b9640272-dfe2-45ec-9c6b-d7443a448c21" />
+  <pluralName>RelationTypes</pluralName>
+  <singularName>RelationType</singularName>
+</objectType>

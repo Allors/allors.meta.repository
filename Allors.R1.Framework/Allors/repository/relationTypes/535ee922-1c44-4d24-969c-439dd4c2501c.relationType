@@ -1,0 +1,11 @@
+<relationType allors="1.0" id="535ee922-1c44-4d24-969c-439dd4c2501c">
+  <associationType id="35411450-c9d6-400d-974f-8ebb89fab1da">
+    <objectType idref="804929af-0208-4384-a74d-17353963d105" />
+  </associationType>
+  <roleType id="eae0de38-8001-4528-8dcc-d6214c0959e6">
+    <isMany>true</isMany>
+    <objectType idref="ceb95f73-a297-48cc-85bc-92efa5954efc" />
+    <pluralName>DeclaredInheritances</pluralName>
+    <singularName>DeclaredInheritance</singularName>
+  </roleType>
+</relationType>

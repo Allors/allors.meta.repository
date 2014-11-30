@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="d855e865-0a24-447f-8808-4608c013034f">
+  <associationType id="c086fa98-4198-47cc-8a73-36cd3dc6e88e">
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="294076ba-d37f-49ef-8275-63d17b113583">
+    <objectType idref="ccd6f134-26de-4103-bff9-a37ec3e997a3" />
+    <pluralName>UnitTags</pluralName>
+    <singularName>UnitTag</singularName>
+  </roleType>
+</relationType>

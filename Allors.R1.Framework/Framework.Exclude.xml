@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<doc>
+  <members>
+    <member name="N:Allors.Meta.AllorsGenerated">
+      <exclude />
+    </member>
+    <member name="N:AllorsFramework">
+      <exclude />
+    </member>
+  </members>
+</doc>

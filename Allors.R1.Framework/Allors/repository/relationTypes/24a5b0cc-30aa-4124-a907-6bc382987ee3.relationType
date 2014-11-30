@@ -1,0 +1,12 @@
+<relationType allors="1.0" id="24a5b0cc-30aa-4124-a907-6bc382987ee3">
+  <associationType id="bd5badf2-a68f-40e6-a514-68f373de0709">
+    <isMany>true</isMany>
+    <objectType idref="804929af-0208-4384-a74d-17353963d105" />
+  </associationType>
+  <roleType id="a12cba2a-d304-49b1-8c05-935b30acb7b5">
+    <isMany>true</isMany>
+    <objectType idref="804929af-0208-4384-a74d-17353963d105" />
+    <pluralName>DerivedSuperDomains</pluralName>
+    <singularName>DerivedSuperDomain</singularName>
+  </roleType>
+</relationType>

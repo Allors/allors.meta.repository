@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="bf7466a1-f0c0-429a-9a23-e9eccd89abfa">
+  <associationType id="c659dfb9-b438-4871-acf5-ed9f4a4ef257">
+    <objectType idref="903d3eb5-dc70-4cb4-93b8-5a1d0899c949" />
+  </associationType>
+  <roleType id="aad4b6d1-27b1-4738-907f-68da3cf3ec93">
+    <objectType idref="b5ee6cea-4e2b-498e-a5dd-24671d896477" />
+    <pluralName>AreMany</pluralName>
+    <singularName>IsMany</singularName>
+  </roleType>
+</relationType>

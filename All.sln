@@ -1,0 +1,146 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development.Winforms", "Allors.R1.Development.Winforms\Allors.R1.Development.Winforms.csproj", "{6BBD6F92-C321-4A5C-9F88-FC1E592386C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development.Tests", "Allors.R1.Development.Tests\Allors.R1.Development.Tests.csproj", "{18818AF5-DFD0-4422-BE76-C4C7B5F55688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development", "Allors.R1.Development\Allors.R1.Development.csproj", "{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development.Winforms.Tests", "Allors.R1.Development.Winforms.Tests\Allors.R1.Development.Winforms.Tests.csproj", "{FF6969E8-6480-4416-8079-25359E703C2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Framework", "Allors.R1.Framework\Allors.R1.Framework.csproj", "{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Framework.Tests", "Allors.R1.Framework.Tests\Allors.R1.Framework.Tests.csproj", "{285DF443-25E5-4F7F-AA26-0584DF0AEFF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development.GtkSharp", "Allors.R1.Development.GtkSharp\Allors.R1.Development.GtkSharp.csproj", "{611C63BA-64DB-401B-9E16-C394055A37BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development.GtkSharp.Program", "Allors.R1.Development.GtkSharp.Program\Allors.R1.Development.GtkSharp.Program.csproj", "{D6C42BAE-F7AA-4400-B786-716F6EA8D607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development.Winforms.Program", "Allors.R1.Development.Winforms.Program\Allors.R1.Development.Winforms.Program.csproj", "{C659060F-27E4-4225-BBC6-F08780C5D182}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{19ED09AA-DC8E-4D73-8C52-905DE4433364}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Development.GtkSharp.Tests", "Allors.R1.Development.GtkSharp.Tests\Allors.R1.Development.GtkSharp.Tests.csproj", "{924AA67B-3B6C-4CEF-B375-0B13737D800C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Adapters", "..\adapters\Allors.R1.Adapters\Allors.R1.Adapters.csproj", "{719EEE0F-82D8-4E41-B8C5-A4B240265C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Adapters.Database.Memory", "..\adapters\Allors.R1.Adapters.Database.Memory\Allors.R1.Adapters.Database.Memory.csproj", "{3684545F-436B-4134-A5EF-9455EE6FFF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Adapters.Database.Npgsql", "..\adapters\Allors.R1.Adapters.Database.Npgsql\Allors.R1.Adapters.Database.Npgsql.csproj", "{188AA6F9-0526-450D-A8B2-EF1C942384F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Adapters.Database.SqlClient", "..\adapters\Allors.R1.Adapters.Database.SqlClient\Allors.R1.Adapters.Database.SqlClient.csproj", "{6A226DC3-A67E-49C6-A617-B8ABF42B631B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.R1.Adapters.Workspace.Memory", "..\adapters\Allors.R1.Adapters.Workspace.Memory\Allors.R1.Adapters.Workspace.Memory.csproj", "{ADE0BBCA-498E-4C78-A00C-EF0B9A2DB3C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "..\core\Domain\Domain.csproj", "{678B2AD5-3B0A-45F7-AE15-E3E29DA4148C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "..\core\Web\Web.csproj", "{6FCB5C17-945E-47A2-B5C8-B089B6AF191A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BBD6F92-C321-4A5C-9F88-FC1E592386C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBD6F92-C321-4A5C-9F88-FC1E592386C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBD6F92-C321-4A5C-9F88-FC1E592386C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBD6F92-C321-4A5C-9F88-FC1E592386C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18818AF5-DFD0-4422-BE76-C4C7B5F55688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18818AF5-DFD0-4422-BE76-C4C7B5F55688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18818AF5-DFD0-4422-BE76-C4C7B5F55688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18818AF5-DFD0-4422-BE76-C4C7B5F55688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6969E8-6480-4416-8079-25359E703C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6969E8-6480-4416-8079-25359E703C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6969E8-6480-4416-8079-25359E703C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6969E8-6480-4416-8079-25359E703C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285DF443-25E5-4F7F-AA26-0584DF0AEFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285DF443-25E5-4F7F-AA26-0584DF0AEFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285DF443-25E5-4F7F-AA26-0584DF0AEFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285DF443-25E5-4F7F-AA26-0584DF0AEFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{611C63BA-64DB-401B-9E16-C394055A37BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611C63BA-64DB-401B-9E16-C394055A37BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611C63BA-64DB-401B-9E16-C394055A37BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611C63BA-64DB-401B-9E16-C394055A37BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C42BAE-F7AA-4400-B786-716F6EA8D607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C42BAE-F7AA-4400-B786-716F6EA8D607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C42BAE-F7AA-4400-B786-716F6EA8D607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C42BAE-F7AA-4400-B786-716F6EA8D607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C659060F-27E4-4225-BBC6-F08780C5D182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C659060F-27E4-4225-BBC6-F08780C5D182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C659060F-27E4-4225-BBC6-F08780C5D182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C659060F-27E4-4225-BBC6-F08780C5D182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924AA67B-3B6C-4CEF-B375-0B13737D800C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924AA67B-3B6C-4CEF-B375-0B13737D800C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924AA67B-3B6C-4CEF-B375-0B13737D800C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924AA67B-3B6C-4CEF-B375-0B13737D800C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719EEE0F-82D8-4E41-B8C5-A4B240265C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719EEE0F-82D8-4E41-B8C5-A4B240265C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719EEE0F-82D8-4E41-B8C5-A4B240265C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719EEE0F-82D8-4E41-B8C5-A4B240265C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3684545F-436B-4134-A5EF-9455EE6FFF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3684545F-436B-4134-A5EF-9455EE6FFF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3684545F-436B-4134-A5EF-9455EE6FFF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3684545F-436B-4134-A5EF-9455EE6FFF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188AA6F9-0526-450D-A8B2-EF1C942384F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188AA6F9-0526-450D-A8B2-EF1C942384F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188AA6F9-0526-450D-A8B2-EF1C942384F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188AA6F9-0526-450D-A8B2-EF1C942384F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A226DC3-A67E-49C6-A617-B8ABF42B631B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A226DC3-A67E-49C6-A617-B8ABF42B631B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A226DC3-A67E-49C6-A617-B8ABF42B631B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A226DC3-A67E-49C6-A617-B8ABF42B631B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE0BBCA-498E-4C78-A00C-EF0B9A2DB3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE0BBCA-498E-4C78-A00C-EF0B9A2DB3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE0BBCA-498E-4C78-A00C-EF0B9A2DB3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE0BBCA-498E-4C78-A00C-EF0B9A2DB3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678B2AD5-3B0A-45F7-AE15-E3E29DA4148C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678B2AD5-3B0A-45F7-AE15-E3E29DA4148C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678B2AD5-3B0A-45F7-AE15-E3E29DA4148C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678B2AD5-3B0A-45F7-AE15-E3E29DA4148C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCB5C17-945E-47A2-B5C8-B089B6AF191A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCB5C17-945E-47A2-B5C8-B089B6AF191A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCB5C17-945E-47A2-B5C8-B089B6AF191A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCB5C17-945E-47A2-B5C8-B089B6AF191A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Allors.R1.Development.GtkSharp.Program\Allors.R1.Development.GtkSharp.Program.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 120
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.BeforeMethodDeclarationParentheses = False
+		$3.AfterDelegateDeclarationParameterComma = True
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+EndGlobal

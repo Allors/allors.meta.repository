@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BBD6F92-C321-4A5C-9F88-FC1E592386C7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Allors.R1.Development.Winforms</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Allors.R1.Development.Winforms</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\MetavalidationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Converters\SettingsConverter.cs" />
+    <Compile Include="Converters\SettingConverter.cs" />
+    <Compile Include="Converters\AssociationConverter.cs" />
+    <Compile Include="Converters\RoleTypeConverter.cs" />
+    <Compile Include="Converters\SuperinterfacesConverter.cs" />
+    <Compile Include="Decorators\AssociationDecorator.cs" />
+    <Compile Include="Decorators\AssociationLockedDecorator.cs" />
+    <Compile Include="Decorators\EmptyDecorator.cs" />
+    <Compile Include="Decorators\TemplateDecorator.cs" />
+    <Compile Include="Decorators\DomainDecorator.cs" />
+    <Compile Include="Decorators\ObjectTypeDecorator.cs" />
+    <Compile Include="Decorators\ObjectTypeLockedDecorator.cs" />
+    <Compile Include="Decorators\ObjectTypeSuperClassLockedDecorator.cs" />
+    <Compile Include="Objects\Setting.cs" />
+    <Compile Include="Decorators\SuperDomainDecorator.cs" />
+    <Compile Include="Decorators\RelationTypeDecorator.cs" />
+    <Compile Include="Decorators\RelationTypeLockedDecorator.cs" />
+    <Compile Include="Decorators\RepositoryDecorator.cs" />
+    <Compile Include="Decorators\RoleTypeDecorator.cs" />
+    <Compile Include="Decorators\RoleTypeLockedDecorator.cs" />
+    <Compile Include="Decorators\RoleTypePropertyNames.cs" />
+    <Compile Include="Dialogs\GeneratingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\ObjectTypeEditorListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\ObjectTypeTypeEditor.cs" />
+    <Compile Include="Editors\SuperClassTypeEditor.cs" />
+    <Compile Include="Editors\SuperinterfacesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\SuperinterfacesTypeEditor.cs" />
+    <Compile Include="Explorer\Explorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Explorer\ExplorerEvents.cs" />
+    <Compile Include="Explorer\ExplorerSorter.cs" />
+    <Compile Include="Explorer\tags\TemplatesTag.cs" />
+    <Compile Include="Explorer\tags\TemplateTag.cs" />
+    <Compile Include="Explorer\tags\InheritancesTag.cs" />
+    <Compile Include="Explorer\tags\InheritanceTag.cs" />
+    <Compile Include="Explorer\tags\DomainTag.cs" />
+    <Compile Include="Explorer\tags\ObjectTypeTag.cs" />
+    <Compile Include="Explorer\tags\SuperDomainsTag.cs" />
+    <Compile Include="Explorer\tags\SuperDomainTag.cs" />
+    <Compile Include="Explorer\tags\RelationTypeTag.cs" />
+    <Compile Include="Explorer\tags\RepositoriesTag.cs" />
+    <Compile Include="Explorer\tags\RepositoryTag.cs" />
+    <Compile Include="Explorer\tags\Tag.cs" />
+    <Compile Include="Explorer\TreeNodeExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyGrid\PropertyOrderAttribute.cs" />
+    <Compile Include="PropertyGrid\ExpandablePropertySorter.cs" />
+    <Compile Include="PropertyGrid\PropertySorter.cs" />
+    <Compile Include="Wizards\AddTemplateWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\AddObjectTypeWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\AddRelationTypeWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\AddRepositoryWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\Extensions\RichTextBoxExtensions.cs" />
+    <Compile Include="Wizards\PullUpInheritanceWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\PullUpObjectTypeWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\PullUpRelationTypeWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\PushDownInheritanceWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\PushDownObjectTypeWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\PushDownRelationTypeWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Controls\MetavalidationView.resources" />
+    <EmbeddedResource Include="Controls\MetavalidationView.resx">
+      <DependentUpon>MetavalidationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GeneratingDialog.resources" />
+    <EmbeddedResource Include="Dialogs\GeneratingDialog.resx">
+      <DependentUpon>GeneratingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\SuperinterfacesEditor.resx">
+      <DependentUpon>SuperinterfacesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer\Explorer.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\AddTemplateWizard.resx">
+      <DependentUpon>AddTemplateWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\AddObjectTypeWizard.resx">
+      <DependentUpon>AddObjectTypeWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\AddRelationTypeWizard.resx">
+      <DependentUpon>AddRelationTypeWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\AddRepositoryWizard.resx">
+      <DependentUpon>AddRepositoryWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\PullUpInheritanceWizard.resx">
+      <DependentUpon>PullUpInheritanceWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\PullUpObjectTypeWizard.resx">
+      <DependentUpon>PullUpObjectTypeWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\PullUpRelationTypeWizard.resx">
+      <DependentUpon>PullUpRelationTypeWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\PushDownInheritanceWizard.resx">
+      <DependentUpon>PushDownInheritanceWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\PushDownObjectTypeWizard.resx">
+      <DependentUpon>PushDownObjectTypeWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\PushDownRelationTypeWizard.resx">
+      <DependentUpon>PushDownRelationTypeWizard.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Allors.R1.Development\Allors.R1.Development.csproj">
+      <Project>{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}</Project>
+      <Name>Allors.R1.Development</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Allors.R1.Framework\Allors.R1.Framework.csproj">
+      <Project>{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}</Project>
+      <Name>Allors.R1.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

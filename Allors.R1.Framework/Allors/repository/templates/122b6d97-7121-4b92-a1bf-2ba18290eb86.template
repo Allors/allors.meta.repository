@@ -1,0 +1,7 @@
+<template allors="1.0">
+  <name>Embedded</name>
+  <settings key="allors.namespace">
+    <value>Allors.R1.Meta</value>
+  </settings>
+  <source>file:///C:/github/allors.meta.repository/Allors.R1.Framework/Templates/embedded.stg</source>
+</template>

@@ -1,0 +1,5 @@
+<objectType allors="1.0" id="edf4fdb9-9fc9-4914-bd67-c781f9199f98">
+  <namespace idref="b9640272-dfe2-45ec-9c6b-d7443a448c21" />
+  <pluralName>MethodTypes</pluralName>
+  <singularName>MethodType</singularName>
+</objectType>

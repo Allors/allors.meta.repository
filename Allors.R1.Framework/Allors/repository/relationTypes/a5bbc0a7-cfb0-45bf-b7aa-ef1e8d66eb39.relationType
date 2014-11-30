@@ -1,0 +1,11 @@
+<relationType allors="1.0" id="a5bbc0a7-cfb0-45bf-b7aa-ef1e8d66eb39">
+  <associationType id="434943ff-1d78-4208-a9db-140fcf961bf4">
+    <objectType idref="51df648e-4870-403a-8b2e-50f6e63d4749" />
+  </associationType>
+  <roleType id="db6fe3e6-d251-4d93-adfc-f4ca68b9f836">
+    <objectType idref="ad7f5ddc-bedb-4aaa-97ac-d6693a009ba9" />
+    <pluralName>DerivedRootNames</pluralName>
+    <singularName>DerivedRootName</singularName>
+    <size>256</size>
+  </roleType>
+</relationType>

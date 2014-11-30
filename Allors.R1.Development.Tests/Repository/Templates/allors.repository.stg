@@ -1,0 +1,109 @@
+group Project;
+
+TemplateId() ::= <<516D4D6C-9AD1-41f6-88AA-181AAE0126C5>>
+TemplateName() ::= <<Allors Project>>
+TemplateVersion() ::= <<1.0.1>>
+TemplateAllors() ::= <<1.0>>
+TemplateConfiguration(domain) ::= <<
+$! 
+Copyright 2002-2008 Allors bvba.
+
+Dual Licensed under
+  a) the Lesser General Public Licence v3 (LGPL)
+  b) the Allors License
+
+The LGPL License is included in the file lgpl.txt.
+The Allors License is an addendum to your contract.
+
+Allors Platform is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+For more information visit http://www.allors.com/legal
+!$
+<allors version="1.0">
+<generation template="subject" output="allors.subject"/> 
+$domain.compositeObjectTypes:{objectType|<generation template="objectType" input="$objectType.IdAsNumberString$" output="objects/$objectType.IdAsNumberString$.object"/>}$
+$domain.relationTypes:{relationType|<generation template="relationType" input="$relationType.IdAsNumberString$" output="relations/$relationType.IdAsNumberString$.relation"/>}$
+$domain.namespaces:{namespace|<generation template="namespace" input="$namespace.IdAsNumberString$" output="namespaces/$namespace.IdAsNumberString$.namespace"/>}$
+$domain.inheritances:{inheritance|<generation template="inheritance" input="$inheritance.IdAsNumberString$" output="inheritances/$inheritance.IdAsNumberString$.inheritance"/>}$
+</allors>
+>>
+
+objectType(domain,objectType) ::= <<
+<type allors="1.0" id="$objectType.Id$">
+$if(!type.IsDefaultAssignedSingularName)$
+  <singularName>$objectType.SingularName$</singularName>
+$endif$ 
+$if(!type.IsDefaultAssignedPluralName)$
+  <pluralName>$objectType.PluralName$</pluralName>
+$endif$ 
+$if(!type.IsDefaultIsAbstract)$
+  <isAbstract>$objectType.IsAbstract$</isAbstract>
+$endif$  
+$if(!type.IsDefaultIsInterface)$
+  <isInterface>$objectType.IsInterface$</isInterface>
+$endif$  
+$if(!type.IsDefaultIsMultiple)$
+  <IsMultiple>$objectType.IsMultiple$</IsMultiple>
+$endif$  
+</type>
+>>
+
+relationType(domain,relationType) ::= <<
+<relation allors="1.0" id="$relationType.Id$">
+  <association>
+    <type idref="$relationType.Association.Type.Id$" />
+  $if(!relation.Association.IsDefaultAssignedSingularName)$
+    <singularName>$relationType.Association.AssignedSingularName$</singularName>
+  $endif$  
+  $if(!relation.Association.IsDefaultAssignedPluralName)$
+    <pluralName>$relationType.Association.AssignedPluralName$</pluralName>
+  $endif$  
+  $if(!relation.Association.IsDefaultIsMany)$
+    <isMany>$relationType.Association.isMany$</isMany>
+  $endif$  
+  </association>
+  <role>
+    <type idref="$relationType.Role.Type.Id$" />
+  $if(!relation.Role.IsDefaultAssignedSingularName)$
+    <singularName>$relationType.Role.AssignedSingularName$</singularName>
+  $endif$  
+  $if(!relation.Role.IsDefaultAssignedPluralName)$
+    <pluralName>$relationType.Role.AssignedPluralName$</pluralName>
+  $endif$  
+  $if(!relation.Role.IsDefaultIsMany)$
+    <isMany>$relationType.Role.isMany$</isMany>
+  $endif$  
+  </role>
+$if(!relation.IsDefaultIsIndexed)$
+  <isIndexed>$relationType.isIndexed$</isIndexed>
+$endif$  
+
+</relation>
+>>
+
+namespace(domain,namespace) ::= <<
+<namespace allors="1.0" id="$namespace.Id$">
+  <longName>$namespace.LongName$</longName>
+  <shortName>$namespace.ShortName$</shortName>
+</namespace>
+>>
+
+inheritance(domain,inheritance) ::= <<
+<inheritance allors="1.0" id="$inheritance.Id$">
+$if(!inheritance.IsDefaultSuperType)$
+  <supertype idref="$inheritance.Supertype.Id$" />
+$endif$  
+$if(!inheritance.IsDefaultSubType)$
+  <subtype idref="$inheritance.subtype.Id$" />
+$endif$  
+</inheritance>
+>>
+
+subject(domain) ::= <<
+<subject allors="1.0" id="$domain.subject.Id$">
+  <name>$domain.subject.name$</name>
+</subject>
+>>

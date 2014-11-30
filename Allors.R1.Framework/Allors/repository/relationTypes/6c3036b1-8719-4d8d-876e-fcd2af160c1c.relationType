@@ -1,0 +1,12 @@
+<relationType allors="1.0" id="6c3036b1-8719-4d8d-876e-fcd2af160c1c">
+  <associationType id="b589040c-1a32-4116-859e-ee073cb4e512">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="0a4bc4d9-dc4e-4bd9-94e1-64db40ce3661">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+    <pluralName>DerivedSuperinterfaces</pluralName>
+    <singularName>DerivedSuperinterface</singularName>
+  </roleType>
+</relationType>

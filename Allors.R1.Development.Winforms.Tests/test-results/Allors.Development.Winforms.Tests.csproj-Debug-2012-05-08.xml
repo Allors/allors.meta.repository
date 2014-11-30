@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2012-05-08T17:20:34</TestDate>
+      <Status>Failure</Status>
+      <TotalFailures>38</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Child test failed</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="Allors">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2012-05-08T17:20:34</TestDate>
+          <Status>Failure</Status>
+          <TotalFailures>38</TotalFailures>
+          <TotalSuccess>0</TotalSuccess>
+          <TotalIgnored>0</TotalIgnored>
+          <Time />
+          <Message>Child test failed</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="Development">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2012-05-08T17:20:34</TestDate>
+              <Status>Failure</Status>
+              <TotalFailures>38</TotalFailures>
+              <TotalSuccess>0</TotalSuccess>
+              <TotalIgnored>0</TotalIgnored>
+              <Time />
+              <Message>Child test failed</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="WinForms">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2012-05-08T17:20:34</TestDate>
+                  <Status>Failure</Status>
+                  <TotalFailures>38</TotalFailures>
+                  <TotalSuccess>0</TotalSuccess>
+                  <TotalIgnored>0</TotalIgnored>
+                  <Time />
+                  <Message>Child test failed</Message>
+                </UnitTestResult>
+              </Results>
+              <Tests>
+                <TestRecord Name="Tests">
+                  <Results>
+                    <UnitTestResult>
+                      <TestDate>2012-05-08T17:20:34</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>38</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Child test failed</Message>
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2012-05-08T17:21:10</TestDate>
+                      <Status>Failure</Status>
+                      <TotalFailures>38</TotalFailures>
+                      <TotalSuccess>0</TotalSuccess>
+                      <TotalIgnored>0</TotalIgnored>
+                      <Time />
+                      <Message>Child test failed</Message>
+                    </UnitTestResult>
+                  </Results>
+                  <Tests>
+                    <TestRecord Name="ExplorerTest">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:20:34</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>15</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:21:10</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>15</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="AddRepository">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoriesNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 134
+   at Allors.Development.WinForms.Tests.ExplorerTest.AddRepository() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 125</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoriesNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 134
+   at Allors.Development.WinForms.Tests.ExplorerTest.AddRepository() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 125</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:18</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoriesNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 134
+   at Allors.Development.WinForms.Tests.ExplorerTest.AddRepository() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 125</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="AddSubject">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.AddSubject() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 182</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.AddSubject() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 182</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="CreateDomainAfterShowingExplorer">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.CreateDomainAfterShowingExplorer() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 213</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.CreateDomainAfterShowingExplorer() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 213</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="CreateDomainBeforeShowingExplorer">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.CreateDomainBeforeShowingExplorer() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 227</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.CreateDomainBeforeShowingExplorer() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 227</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="DeleteNamespace">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteNamespace() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 252</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteNamespace() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 252</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="DeleteRelation">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteRelation() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 300</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteRelation() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 300</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="DeleteSubject">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteSubject() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 334</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteSubject() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 334</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="DeleteType">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteType() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 380</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteType() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 380</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="DeleteTypeWithCascading">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteTypeWithCascading() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 445</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.ExplorerTest.DeleteTypeWithCascading() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 445</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="EmptyRelation">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.EmptyRelation() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 482</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.EmptyRelation() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 482</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="EmptyType">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.EmptyType() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 504</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoryNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 139
+   at Allors.Development.WinForms.Tests.ExplorerTest.EmptyType() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 504</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Generate">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.Generate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 520</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.Generate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 520</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="InheritedTypeNoMenus">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_SuperTypesNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 144
+   at Allors.Development.WinForms.Tests.ExplorerTest.InheritedTypeNoMenus() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 561</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_SuperTypesNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 144
+   at Allors.Development.WinForms.Tests.ExplorerTest.InheritedTypeNoMenus() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 561</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="NoRepository">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Development.WinForms.Tests.ExplorerTest.NoRepository() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 577</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Development.WinForms.Tests.ExplorerTest.NoRepository() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 577</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="UpdateTemplate">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.UpdateTemplate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 588</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.ExplorerTest.UpdateTemplate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\ExplorerTest.cs:line 588</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="GeneratorTest">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:20:34</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>4</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:21:10</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>4</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="Empty">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.Empty() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 171</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.Empty() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 171</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="IllegalTemplate">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.IllegalTemplate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 193</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.IllegalTemplate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 193</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Minimal">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 216</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 216</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="MissingTemplate">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.MissingTemplate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 242</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.set_ExtendedView(Boolean value) in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 67
+   at Allors.Development.WinForms.Tests.GeneratorTest.MissingTemplate() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\GeneratorTest.cs:line 242</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="PropertiesTest">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:20:34</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>10</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:21:10</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>10</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="Interfaces">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at Allors.Testing.Winforms.Testers.TreeViewTester.SelectNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 40
+   at Allors.Development.WinForms.Tests.PropertiesTest.Interfaces() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 96</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at Allors.Testing.Winforms.Testers.TreeViewTester.SelectNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 40
+   at Allors.Development.WinForms.Tests.PropertiesTest.Interfaces() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 96</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="MergedNamespace">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.PropertiesTest.MergedNamespace() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 132</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.PropertiesTest.MergedNamespace() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 132</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Namespace">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.PropertiesTest.Namespace() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 161</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.PropertiesTest.Namespace() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 161</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Relation">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.Relation() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 222</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.Relation() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 222</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="RelationType">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.RelationType() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 304</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.RelationType() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 304</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Repositories">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoriesNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 134
+   at Allors.Development.WinForms.Tests.PropertiesTest.Repositories() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 326</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_RepositoriesNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 134
+   at Allors.Development.WinForms.Tests.PropertiesTest.Repositories() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 326</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="SuperClass">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at Allors.Development.WinForms.Tests.PropertiesTest.SuperClass() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 370</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at Allors.Development.WinForms.Tests.PropertiesTest.SuperClass() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 370</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="SuperTypes">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.SuperTypes() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 424</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.SuperTypes() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 424</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Type">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.Type() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 469</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.Type() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 469</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="TypeNamespaces">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.TypeNamespaces() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 504</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.PropertiesTest.TypeNamespaces() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\PropertiesTest.cs:line 504</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="RelationWizardTest">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:20:34</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>2</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:21:10</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>2</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="Maximal">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.RelationWizardTest.Maximal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\RelationWizardTest.cs:line 93</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.RelationWizardTest.Maximal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\RelationWizardTest.cs:line 93</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Minimal">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.RelationWizardTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\RelationWizardTest.cs:line 135</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_TypeNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 149
+   at Allors.Development.WinForms.Tests.RelationWizardTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\RelationWizardTest.cs:line 135</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="RepositoryWizardTest">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:20:34</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>1</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:21:10</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>1</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="Minimal">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at Allors.Development.WinForms.Tests.RepositoryWizardTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\RepositoryWizardTest.cs:line 70</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at Allors.Development.WinForms.Tests.RepositoryWizardTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\RepositoryWizardTest.cs:line 70</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                    <TestRecord Name="TypeWizardTest">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:20:34</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>6</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2012-05-08T17:21:10</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>6</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>Child test failed</Message>
+                        </UnitTestResult>
+                      </Results>
+                      <Tests>
+                        <TestRecord Name="IncorrectSingularName">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.IncorrectSingularName() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 101</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.IncorrectSingularName() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 101</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Maximal">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.Maximal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 135</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.Maximal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 135</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Minimal">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 168</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.Minimal() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 168</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="Namespaces">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.Namespaces() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 200</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.Namespaces() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 200</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="NoPluralName">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.NoPluralName() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 222</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.NoPluralName() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 222</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                        <TestRecord Name="NoSingularName">
+                          <Results>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:20:34</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.NoSingularName() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 250</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                            <UnitTestResult>
+                              <TestDate>2012-05-08T17:21:10</TestDate>
+                              <Status>Failure</Status>
+                              <TotalFailures>1</TotalFailures>
+                              <TotalSuccess>0</TotalSuccess>
+                              <TotalIgnored>0</TotalIgnored>
+                              <Time />
+                              <Message>System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+                              <StackTrace>   at Allors.Testing.Winforms.GenericTester`1.get_Target() in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\GenericTester.cs:line 46
+   at Allors.Testing.Winforms.Testers.TreeViewTester.FindNode(Int32[] indeces) in C:\Allors\TestingWinForms\Allors.Testing.Winforms\src\testers\TreeViewTester.cs:line 57
+   at AllorsTestWindowsTests.AllorsWithoutRepositoryTest.get_NamespaceNode() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\support\AllorsWithoutRepositoryTest.cs:line 124
+   at Allors.Development.WinForms.Tests.TypeWizardTest.NoSingularName() in c:\Allors\Development\trunk\Allors.Development.Winforms.Tests\src\TypeWizardTest.cs:line 250</StackTrace>
+                              <ConsoleOutput />
+                              <ConsoleError />
+                            </UnitTestResult>
+                          </Results>
+                        </TestRecord>
+                      </Tests>
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

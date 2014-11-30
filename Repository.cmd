@@ -1,0 +1,1 @@
+@start external\allors\development\winforms\Allors.R1.Development.Winforms.Program.exe Allors.R1.Framework\allors\repository

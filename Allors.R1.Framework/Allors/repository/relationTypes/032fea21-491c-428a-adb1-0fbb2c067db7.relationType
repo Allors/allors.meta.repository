@@ -1,0 +1,11 @@
+<relationType allors="1.0" id="032fea21-491c-428a-adb1-0fbb2c067db7">
+  <associationType id="33648bf6-dfa0-46a1-84cd-2caf2073de5c">
+    <isMany>true</isMany>
+    <objectType idref="ceb95f73-a297-48cc-85bc-92efa5954efc" />
+  </associationType>
+  <roleType id="2b19521a-c6be-44af-bbea-aa31f68ba3d5">
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+    <pluralName>Subtypes</pluralName>
+    <singularName>Subtype</singularName>
+  </roleType>
+</relationType>

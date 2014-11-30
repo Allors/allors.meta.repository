@@ -1,0 +1,10 @@
+<relationType allors="1.0" id="8e55c4f5-61f6-448b-b351-942ae4a695a6">
+  <associationType id="f7b1ba18-3a00-44ef-bc63-8f321150f463">
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="51d95ad8-67b6-47e5-976b-449ace367fd4">
+    <objectType idref="b5ee6cea-4e2b-498e-a5dd-24671d896477" />
+    <pluralName>AreInterface</pluralName>
+    <singularName>IsInterface</singularName>
+  </roleType>
+</relationType>

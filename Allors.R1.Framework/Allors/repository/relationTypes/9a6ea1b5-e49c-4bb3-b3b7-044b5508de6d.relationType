@@ -1,0 +1,12 @@
+<relationType allors="1.0" id="9a6ea1b5-e49c-4bb3-b3b7-044b5508de6d">
+  <associationType id="9f1be3e7-89ce-451d-bdc0-7ddd30f81d05">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="0b59de73-039c-4a2b-8440-ec286810cb8a">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+    <pluralName>DerivedSubinterfaces</pluralName>
+    <singularName>DerivedSubinterface</singularName>
+  </roleType>
+</relationType>

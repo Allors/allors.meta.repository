@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8410A719-9E2E-4AC4-9FDD-C1994C105AF0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Allors.R1.Development</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Allors.R1.Development</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>bin\Debug\Allors.R1.Development.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr4.StringTemplate">
+      <HintPath>..\packages\Antlr4.StringTemplate.4.0.6.9004\lib\net35\Antlr4.StringTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Generation\Settings.cs" />
+    <Compile Include="Repository\Generation\IndexedObject.cs" />
+    <Compile Include="Repository\Commands\Command.cs" />
+    <Compile Include="Repository\Commands\PullUp.cs" />
+    <Compile Include="Repository\Commands\PullUpInheritance.cs" />
+    <Compile Include="Repository\Commands\PullUpObjectType.cs" />
+    <Compile Include="Repository\Commands\PullUpRelationType.cs" />
+    <Compile Include="Repository\Commands\PushDown.cs" />
+    <Compile Include="Repository\Commands\PushDownInheritance.cs" />
+    <Compile Include="Repository\Commands\PushDownObjectType.cs" />
+    <Compile Include="Repository\Commands\PushDownRelationType.cs" />
+    <Compile Include="Repository\Generation\Template.cs" />
+    <Compile Include="Repository\Generation\StringTemplate.cs" />
+    <Compile Include="Repository\Generation\Xml\TemplateXml.cs" />
+    <Compile Include="Repository\Generation\Xml\SettingsXml.cs" />
+    <Compile Include="Repository\Log.cs" />
+    <Compile Include="Repository\Meta\RepositoryMetaObjectChangedEventArgs.cs" />
+    <Compile Include="Repository\Meta\RepositoryMetaObjectDeletedEventArgs.cs" />
+    <Compile Include="Repository\Meta\Xml\AssociationTypeXml.cs" />
+    <Compile Include="Repository\Meta\Xml\DomainXml.cs" />
+    <Compile Include="Repository\Meta\Xml\InheritanceXml.cs" />
+    <Compile Include="Repository\Meta\Xml\ObjectTypeXml.cs" />
+    <Compile Include="Repository\Meta\Xml\RelationTypeXml.cs" />
+    <Compile Include="Repository\Meta\Xml\RoleTypeXml.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\RepositoryObject.cs" />
+    <Compile Include="Repository\RepositoryObjectChangedEventArgs.cs" />
+    <Compile Include="Repository\RepositoryObjectDeletedEventArgs.cs" />
+    <Compile Include="Repository\RepositoryOpenedEventArgs.cs" />
+    <Compile Include="Repository\Storage\AllorsDirectoryInfo.cs" />
+    <Compile Include="Repository\Storage\AllorsFileInfo.cs" />
+    <Compile Include="Repository\Storage\Location.cs" />
+    <Compile Include="Repository\Tasks\Generate.cs" />
+    <Compile Include="Repository\Tasks\GenerateLog.cs" />
+    <Compile Include="Repository\Xml\IdrefXml.cs" />
+    <Compile Include="Repository\Xml\RepositoryXml.cs" />
+    <Compile Include="Repository\Xml\SuperXml.cs" />
+    <Compile Include="Resources\Resources.cs" />
+    <Compile Include="Resources\ResourceFile.cs" />
+    <Compile Include="Resources\ResourceDirectory.cs" />
+    <Compile Include="Resources\Tasks\Merge.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Allors.R1.Framework\Allors.R1.Framework.csproj">
+      <Project>{F8160C3F-E4AC-4A1E-B975-CEFBE8E3F0F5}</Project>
+      <Name>Allors.R1.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

@@ -1,0 +1,12 @@
+<relationType allors="1.0" id="dad9ec8c-b723-4b6e-9972-15c14c340e52">
+  <associationType id="80464994-77b3-4df0-a0f7-dd801cdfbbb7">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+  </associationType>
+  <roleType id="ee84e178-5822-462c-b332-1984aef33e4b">
+    <isMany>true</isMany>
+    <objectType idref="e6270568-a164-40ef-bf2b-cfdff59ee1fa" />
+    <pluralName>DerivedSuperclasses</pluralName>
+    <singularName>DerivedSuperclass</singularName>
+  </roleType>
+</relationType>

@@ -1,0 +1,1756 @@
+group AllorsCSharpEmbedded;
+
+TemplateId() ::= <<AC99E680-8D1A-4e76-9BD8-17CA708B1340>>
+TemplateName() ::= <<Allors C# Embedded>>
+TemplateVersion() ::= <<1.0.47>>
+TemplateAllors() ::= <<1.0>>
+TemplateConfiguration(domain, settings) ::= <<
+$!
+Copyright 2002-2013 Allors bvba.
+
+Dual Licensed under
+  a) the Lesser General Public Licence v3 (LGPL)
+  b) the Allors License
+
+The LGPL License is included in the file lgpl.txt.
+The Allors License is an addendum to your contract.
+
+Allors Platform is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+For more information visit http://www.allors.com/legal
+!$
+<generations>
+	<generation template="domain" output="$domain.name$.g.cs"/> 
+$domain.CompositeObjectTypes:{objectType|<generation template="compositeObjectType" input="$objectType.Id $" output="$objectType.SingularName$.g.cs"/>}$
+</generations>
+>>
+
+compositeObjectType(domain,objectType,settings) ::= <<
+
+namespace $namespace()$.AllorsGenerated
+{
+	internal interface AllorsInternal$objectType.SingularName$ : $objectType.DirectSupertypes:{directSupertype|AllorsInternal$directSupertype.SingularName$,}$ AllorsInternal
+	{
+$objectType.AssociationTypesWhereObjectType:{associationType|$interfaceRoleTypeMethods(relationType=associationType.RelationType,associationType=associationType,roleType=associationType.RoleType)$}$
+$objectType.RoleTypesWhereObjectType:{roleType|$interfaceAssociationTypeMethods(relationType=roleType.RelationType,associationType=roleType.AssociationType,roleType=roleType)$}$
+	}
+
+	public interface AllorsInterface$objectType.SingularName$ : $objectType.DirectSuperinterfaces:{directSuperinterface|$globalName(directSuperinterface)$,}$ AllorsEmbeddedObject 
+	{
+	}
+
+$if(!objectType.IsInterface)$
+	[System.Diagnostics.DebuggerNonUserCode]
+	public abstract class AllorsClass$objectType.SingularName$ : $if(objectType.ExistDirectSuperclass)$ $globalName(objectType.DirectSuperclass)$, $endif$ AllorsInternal$objectType.SingularName$ , AllorsEmbeddedObject
+	{
+$objectType.ExclusiveRoleTypes:{roleType|$classRoleTypeDeclaration(relationType=roleType.RelationType,associationType=roleType.AssociationType,roleType=roleType)$}$
+$objectType.ExclusiveAssociationTypes:{associationType|$classAssociationTypeDeclaration(relationType=associationType.RelationType,associationType=associationType,roleType=associationType.RoleType)$}$
+
+
+$if(objectType.ExistDirectSuperclass)$
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AllorsClass$objectType.SingularName$"/> class.
+		/// </summary>
+		/// <param name="session">The Allors Session.</param>
+		/// <param name="id">The Allors Object Id.</param>
+		protected AllorsClass$objectType.SingularName$(AllorsEmbeddedSession session, System.Int32 id) : base(session,id){}
+		
+$else$
+		/// <summary>
+		/// Do not use, this is an Allors internal field.
+		/// </summary>
+		protected bool isDeleted;
+
+		/// <summary>
+		/// Do not use, this is an Allors internal field.
+		/// </summary>
+		protected AllorsEmbeddedSession session;
+
+		/// <summary>
+		/// Do not use, this is an Allors internal field.
+		/// </summary>
+		protected System.Int32 id;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AllorsClass$objectType.SingularName$"/> class.
+		/// </summary>
+		/// <param name="session">The Allors Session.</param>
+		/// <param name="id">The Allors Object Id.</param>
+		protected AllorsClass$objectType.SingularName$ ( AllorsEmbeddedSession session, System.Int32 id ) 
+		{
+			this.session = session;
+			this.id = id;
+		}
+
+		public AllorsEmbeddedSession AllorsSession
+		{ 
+			get
+			{
+				return session;
+			}
+		}
+
+		public int AllorsObjectId
+		{ 
+			get
+			{
+				return id;
+			}
+		}
+
+		public bool IsDeleted
+		{ 
+			get
+			{
+				return isDeleted;
+			}
+		}
+
+		/// <summary>
+		/// Asserts that this Object is in the right state.
+		/// </summary>
+		protected void AllorsAssert()
+		{
+			if( isDeleted ) 
+			{
+				throw new System.Exception("Object of class "+ GetType().ToString() +" with id " + id + " has been deleted");
+			}
+		}
+
+		/// <summary>
+		/// Asserts that this Object and the related Object are in the right state.
+		/// </summary>
+		/// <param name="relatedObject">The related object.</param>
+		protected void AllorsAssert(AllorsEmbeddedObject relatedObject)
+		{
+			AllorsAssert();
+			if( relatedObject!=null && session!=relatedObject.AllorsSession )
+			{
+				throw new System.ArgumentException("Objects are from different populations");
+			}
+		}
+
+		/// <summary>
+		/// Asserts that this Object and the related Objects are in the right state.
+		/// </summary>
+		/// <param name="relatedObjects">The related objects.</param>
+		protected void AllorsAssert(System.Collections.ICollection relatedObjects)
+		{
+			AllorsAssert();
+			if(relatedObjects!=null)
+			{
+				foreach(AllorsEmbeddedObject obj in relatedObjects)
+				{
+					if( obj!=null && session!=obj.AllorsSession )
+					{
+						throw new System.ArgumentException("Objects are from different populations");
+					}
+				}
+			}
+		}
+
+$if(!objectType.IsConcreteComposite)$
+		public abstract System.Guid AllorsObjectTypeId {get;}
+
+		public abstract void Delete();
+
+		object AllorsInternal.GetRole(AllorsEmbeddedRelationType relation)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		void AllorsInternal.SetRole(AllorsEmbeddedRelationType relation, object role)
+		{
+			throw new System.NotImplementedException();
+		}
+
+$endif$
+$endif$
+
+$if(objectType.IsConcreteComposite)$
+		/// <summary>
+		/// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+		/// </summary>
+		/// <returns>
+		/// A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+		/// </returns>
+		public override System.String ToString() {
+			return this.GetType().Name + " (" + this.AllorsObjectId + ")";
+		}
+
+		/// <summary>
+		/// Gets the Object Type Id.
+		/// </summary>
+		/// <value>The Object Type Id.</value>
+		public $if(objectType.ExistDirectSuperclass)$override$endif$ System.Guid AllorsObjectTypeId
+		{ 
+			get
+			{
+				//TODO: make static
+				return new System.Guid("$objectType.Id$");
+			}
+		}
+
+		public $if(objectType.ExistDirectSuperclass)$override$else$virtual$endif$ void Delete()
+		{
+			AllorsAssert();
+
+			$objectType.CompositeRoleTypes:{roleType|(($internalInterfaceRoleType(roleType)$)this).AllorsRemove$roleType.FullSingularName$();
+}$
+			$objectType.AssociationTypes:{associationType|(($internalInterfaceAssociationType(associationType)$)this).AllorsRoleRelease$associationType.FullSingularName$();
+}$
+
+			session.Delete(this);
+			isDeleted = true;
+		}
+
+		object AllorsInternal.GetRole(AllorsEmbeddedRelationType relation)
+		{
+			AllorsAssert();
+			switch(relation.Tag)
+			{
+$objectType.RoleTypes:{roleType|					case AllorsRelationTags.$roleType.RelationType.Name$:
+					return _$roleType.FullSingularName$;
+}$
+		default:
+				throw new System.ArgumentException("Illegal relation " + relation.Name);
+			}
+		}
+
+		void AllorsInternal.SetRole(AllorsEmbeddedRelationType relation, object role)
+		{
+			switch(relation.Tag)
+			{
+$objectType.RoleTypes:{roleType|					case AllorsRelationTags.$roleType.RelationType.Name$:
+					RoleSet$roleType.FullSingularName$(($globalName(roleType.ObjectType)$$if(roleType.isMany)$[]$endif$)role);
+					break;
+}$
+		default:
+				throw new System.ArgumentException("Illegal relation " + relation.Name);
+			}
+		}
+
+$endif$
+
+$objectType.ExclusiveRoleTypes:{roleType|$classRoleTypeMethods(relationType=roleType.RelationType,associationType=roleType.AssociationType,roleType=roleType)$}$
+$objectType.ExclusiveAssociationTypes:{associationType|$classAssociationTypeMethods(relationType=associationType.RelationType,associationType=associationType,roleType=associationType.RoleType)$}$
+}
+$endif$
+}
+>>
+
+classRoleTypeDeclaration(relationType,associationType,roleType) ::= <<
+
+$if(roleType.ObjectType.IsUnit)$
+		protected System.Object _$roleType.FullSingularName$;
+
+$else$
+$if(roleType.IsMany)$
+		protected $globalName(roleType.ObjectType)$[] _$roleType.FullSingularName$ = AllorsEmbeddedArrays.EMPTY_$roleType.ObjectType.SingularName$_ARRAY;
+
+$else$
+		protected $globalName(roleType.ObjectType)$ _$roleType.FullSingularName$;
+
+$endif$
+$endif$
+>>
+
+classAssociationTypeDeclaration(relationType,associationType,roleType) ::= <<
+
+$if(associationType.IsMany)$
+		protected $globalName(associationType.ObjectType)$[] _$associationType.FullSingularName$ = AllorsEmbeddedArrays.EMPTY_$associationType.ObjectType.SingularName$_ARRAY;
+
+$else$
+		protected $globalName(associationType.ObjectType)$ _$associationType.FullSingularName$;
+
+$endif$
+
+>>
+
+classRoleTypeMethods(relationType,associationType,roleType) ::= <<
+$if(roleType.ObjectType.IsUnit)$
+		public virtual $globalName(roleType.ObjectType)$ $roleType.HierarchySingularName$
+		{
+			get
+			{ 
+				AllorsAssert();
+				return ($globalName(roleType.ObjectType)$)_$roleType.FullSingularName$;
+			}
+
+			set
+			{
+				AllorsAssert();
+				RoleSet$roleType.FullSingularName$(value);
+			}
+		}
+
+		protected void RoleSet$roleType.FullSingularName$($globalName(roleType.ObjectType)$ role)
+		{
+			_$roleType.FullSingularName$ = role;
+		}
+
+		public virtual bool Exist$roleType.HierarchySingularName$
+		{
+			get
+			{
+				return _$roleType.FullSingularName$ != null;
+			}
+		}
+
+		public virtual void Remove$roleType.HierarchySingularName$()
+		{
+			_$roleType.FullSingularName$ = null;
+		}
+$else$
+$if(roleType.IsMany)$
+		public virtual $globalName(roleType.ObjectType)$[] $roleType.HierarchyPluralName$
+		{
+			get
+			{ 
+				AllorsAssert();
+				return _$roleType.FullSingularName$;
+			}
+
+			set
+			{ 
+				AllorsAssert(value);
+				RoleSet$roleType.FullSingularName$(value);
+			}
+		}
+
+		protected void RoleSet$roleType.FullSingularName$($globalName(roleType.ObjectType)$[] roles)
+		{
+			(($internalInterfaceRoleType(roleType)$)this).AllorsRemove$roleType.FullSingularName$();
+			if( roles != null && roles.Length > 0 )
+			{
+				foreach( $globalName(roleType.ObjectType)$ role in roles )
+				{
+					RoleAdd$roleType.HierarchySingularName$(role);
+				}
+			}
+		}
+
+		public virtual void Add$roleType.HierarchySingularName$( $globalName(roleType.ObjectType)$ addRole )
+		{
+			RoleAdd$roleType.HierarchySingularName$( addRole );
+		}
+
+		void RoleAdd$roleType.HierarchySingularName$( $globalName(roleType.ObjectType)$ addRole )
+		{
+			AllorsAssert(addRole);
+			if( addRole != null )
+			{
+$if(!associationType.IsMany)$
+				(($internalInterfaceAssociationType(associationType)$)addRole).AllorsRoleRelease$associationType.FullSingularName$();
+$endif$
+				if( !AllorsEmbeddedArrays.Exist( _$roleType.FullSingularName$, addRole ) ) 
+				{
+					// association side
+					_$roleType.FullSingularName$ = ($globalName(roleType.ObjectType)$[]) AllorsEmbeddedArrays.Add( _$roleType.FullSingularName$, addRole );
+					// role side
+$if(associationType.IsMany)$
+					(($internalInterfaceAssociationType(associationType)$)addRole).AllorsRoleSyncAdd$associationType.FullSingularName$( ($globalName(associationType.ObjectType)$) this ); 
+$else$
+					(($internalInterfaceAssociationType(associationType)$)addRole).AllorsRoleSyncSet$associationType.FullSingularName$( ($globalName(associationType.ObjectType)$) this ); 
+$endif$
+				}
+			}
+		}
+
+		public virtual void Remove$roleType.HierarchySingularName$( $globalName(roleType.ObjectType)$ removeRole ) 
+		{
+			(($internalInterfaceRoleType(roleType)$)this).AllorsRemove$roleType.FullSingularName$( removeRole );
+		}
+
+		void $internalInterfaceRoleType(roleType)$.AllorsRemove$roleType.FullSingularName$( $globalName(roleType.ObjectType)$ removeRole ) 
+		{
+			AllorsAssert(removeRole);
+			if( removeRole != null )
+			{
+				if(AllorsEmbeddedArrays.Exist( _$roleType.FullSingularName$, removeRole ) ) 
+				{
+					_$roleType.FullSingularName$ = ($globalName(roleType.ObjectType)$[]) AllorsEmbeddedArrays.Remove( _$roleType.FullSingularName$, removeRole );
+					// role side
+$if(associationType.IsMany)$
+					(($internalInterfaceAssociationType(associationType)$)removeRole).AllorsRoleSyncRemove$associationType.FullSingularName$( ($globalName(associationType.ObjectType)$) this ); 
+$else$
+					(($internalInterfaceAssociationType(associationType)$)removeRole).AllorsRoleSyncSet$associationType.FullSingularName$( null ); 
+$endif$			
+				}
+			}
+		}
+
+		public virtual void Remove$roleType.HierarchyPluralName$()
+		{
+			(($internalInterfaceRoleType(roleType)$)this).AllorsRemove$roleType.FullSingularName$();
+		}
+
+		void $internalInterfaceRoleType(roleType)$.AllorsRemove$roleType.FullSingularName$()
+		{
+			AllorsAssert();
+
+			if( _$roleType.FullSingularName$!=null )
+			{
+				foreach( $globalName(roleType.ObjectType)$ role in _$roleType.FullSingularName$ ) 
+				{
+					// role side
+$if(associationType.IsMany)$
+					(($internalInterfaceAssociationType(associationType)$)role).AllorsRoleSyncRemove$associationType.FullSingularName$( ($globalName(associationType.ObjectType)$) this ); 
+$else$
+					(($internalInterfaceAssociationType(associationType)$)role).AllorsRoleSyncSet$associationType.FullSingularName$( null ); 
+$endif$
+				}
+			}
+			_$roleType.FullSingularName$ = AllorsEmbeddedArrays.EMPTY_$roleType.ObjectType.SingularName$_ARRAY;
+		}
+
+		public virtual bool Exist$roleType.HierarchyPluralName$
+		{
+			get
+			{
+				return _$roleType.FullSingularName$.Length > 0;
+			}
+		}
+
+$else$
+		public virtual $globalName(roleType.ObjectType)$ $roleType.HierarchySingularName$
+		{
+			get
+			{
+				AllorsAssert();
+				return _$roleType.FullSingularName$;
+			}
+
+			set
+			{
+				AllorsAssert(value);
+				RoleSet$roleType.FullSingularName$(value);
+			}
+		}
+
+		protected void RoleSet$roleType.FullSingularName$($globalName(roleType.ObjectType)$ value)
+		{
+			(($internalInterfaceRoleType(roleType)$)this).AllorsRemove$roleType.FullSingularName$();
+			if( value != null ) 
+			{
+				_$roleType.FullSingularName$ = value;
+$if(!associationType.IsMany)$
+				(($internalInterfaceAssociationType(associationType)$)_$roleType.FullSingularName$).AllorsRoleRelease$associationType.FullSingularName$();
+$endif$
+				_$roleType.FullSingularName$ = value;
+				// role side
+$if(associationType.IsMany)$
+				(($internalInterfaceAssociationType(associationType)$)_$roleType.FullSingularName$).AllorsRoleSyncAdd$associationType.FullSingularName$(($globalName(associationType.ObjectType)$) this ); 
+$else$
+				(($internalInterfaceAssociationType(associationType)$)_$roleType.FullSingularName$).AllorsRoleSyncSet$associationType.FullSingularName$(($globalName(associationType.ObjectType)$) this ); 
+$endif$
+			}
+		}
+
+		public virtual void Remove$roleType.HierarchySingularName$()
+		{
+			(($internalInterfaceRoleType(roleType)$)this).AllorsRemove$roleType.FullSingularName$();
+		}
+		
+		void $internalInterfaceRoleType(roleType)$.AllorsRemove$roleType.FullSingularName$()
+		{
+			AllorsAssert();
+			if( _$roleType.FullSingularName$ != null) 
+			{
+$if(associationType.IsMany)$
+				(($internalInterfaceAssociationType(associationType)$)_$roleType.FullSingularName$).AllorsRoleSyncRemove$associationType.FullSingularName$( ($globalName(associationType.ObjectType)$) this ); 
+$else$
+				(($internalInterfaceAssociationType(associationType)$)_$roleType.FullSingularName$).AllorsRoleSyncSet$associationType.FullSingularName$( null ); 
+$endif$
+				_$roleType.FullSingularName$ = null;
+				_$roleType.FullSingularName$ = null;
+			}
+		}
+
+		public virtual bool Exist$roleType.HierarchySingularName$
+		{
+			get
+			{
+				return _$roleType.FullSingularName$ != null;
+			}
+		}
+$endif$
+$endif$
+>>
+
+classAssociationTypeMethods(relationType,associationType,roleType) ::= <<
+$if(!roleType.ObjectType.IsUnit)$
+$if(associationType.IsMany)$
+		public virtual $globalName(associationType.ObjectType)$[] $associationType.PluralName$Where$roleType.SingularName$
+		{
+			get
+			{
+				AllorsAssert();
+				return _$associationType.FullSingularName$;
+			}
+		}
+
+		public virtual bool Exist$associationType.PluralName$Where$roleType.SingularName$
+		{
+			get
+			{
+				return _$associationType.FullSingularName$.Length > 0;
+			}
+		}
+
+		void $internalInterfaceAssociationType(associationType)$.AllorsRoleSyncAdd$associationType.FullSingularName$($globalName(associationType.ObjectType)$ association)
+		{
+			AllorsAssert();
+			if( !AllorsEmbeddedArrays.Exist( _$associationType.FullSingularName$, association ) ) 
+			{
+				_$associationType.FullSingularName$ = ($globalName(associationType.ObjectType)$[])AllorsEmbeddedArrays.Add(_$associationType.FullSingularName$,association);
+			}
+		}
+
+		void $internalInterfaceAssociationType(associationType)$.AllorsRoleSyncRemove$associationType.FullSingularName$($globalName(associationType.ObjectType)$ association)
+		{
+			AllorsAssert();
+			_$associationType.FullSingularName$ = ($globalName(associationType.ObjectType)$[]) AllorsEmbeddedArrays.Remove(_$associationType.FullSingularName$,association);
+		}
+
+		void $internalInterfaceAssociationType(associationType)$.AllorsRoleRelease$associationType.FullSingularName$()
+		{
+			AllorsAssert();
+			foreach( $globalName(associationType.ObjectType)$ association in _$associationType.FullSingularName$ )
+			{
+$if(roleType.IsMany)$
+				(($internalInterfaceRoleType(roleType)$)association).AllorsRemove$roleType.FullSingularName$(($globalName(roleType.ObjectType)$) this);
+$else$
+				(($internalInterfaceRoleType(roleType)$)association).AllorsRemove$roleType.FullSingularName$();
+$endif$
+			}
+		}
+$else$
+
+		public virtual $globalName(associationType.ObjectType)$ $associationType.SingularName$Where$roleType.SingularName$
+		{
+			get
+			{
+				AllorsAssert();
+				return _$associationType.FullSingularName$;
+			}
+		}
+
+		public virtual bool Exist$associationType.SingularName$Where$roleType.SingularName$
+		{
+			get
+			{
+				return _$associationType.FullSingularName$ != null;
+			}
+		}
+
+		void $internalInterfaceAssociationType(associationType)$.AllorsRoleSyncSet$associationType.FullSingularName$($globalName(associationType.ObjectType)$ association)
+		{
+			AllorsAssert();
+			_$associationType.FullSingularName$ = association;
+		}
+
+		void $internalInterfaceAssociationType(associationType)$.AllorsRoleRelease$associationType.FullSingularName$()
+		{
+			if( _$associationType.FullSingularName$ != null )
+			{
+$if(roleType.IsMany)$
+				(($internalInterfaceRoleType(roleType)$)_$associationType.FullSingularName$).AllorsRemove$roleType.FullSingularName$( ($globalName(roleType.ObjectType)$) this);
+$else$
+				(($internalInterfaceRoleType(roleType)$)_$associationType.FullSingularName$).AllorsRemove$roleType.FullSingularName$();
+$endif$
+			}
+		}
+
+$endif$
+$endif$
+>>
+
+interfaceRoleTypeMethods(relationType,associationType,roleType) ::= <<
+$if(roleType.IsMany)$
+		$globalName(roleType.ObjectType)$[] $roleType.HierarchyPluralName$
+		{
+			get;
+			set;
+		}
+
+		void Add$roleType.HierarchySingularName$( $globalName(roleType.ObjectType)$ addRole );
+
+		void Remove$roleType.HierarchySingularName$( $globalName(roleType.ObjectType)$ removeRole );
+
+		void Remove$roleType.HierarchyPluralName$();
+
+		bool Exist$roleType.HierarchyPluralName$
+		{
+			get;
+		}
+$else$
+		$globalName(roleType.ObjectType)$ $roleType.HierarchySingularName$
+		{
+			get;
+			set;
+		}
+
+		void Remove$roleType.HierarchySingularName$();
+
+		bool Exist$roleType.HierarchySingularName$
+		{
+			get;
+		}
+$endif$
+
+$if(!roleType.ObjectType.IsUnit)$
+		void AllorsRemove$roleType.FullSingularName$();
+
+$if(roleType.IsMany)$
+		void AllorsRemove$roleType.FullSingularName$( $globalName(roleType.ObjectType)$ role );
+
+$endif$
+$endif$
+>>
+
+interfaceAssociationTypeMethods(relationType,associationType,roleType) ::= <<
+$if(!roleType.ObjectType.IsUnit)$
+$if(associationType.IsMany)$
+		$globalName(associationType.ObjectType)$[] $associationType.PluralName$Where$roleType.SingularName$
+		{
+			get;
+		}
+
+		bool Exist$associationType.PluralName$Where$roleType.SingularName$
+		{
+			get;
+		}
+
+$else$
+
+		$globalName(associationType.ObjectType)$ $associationType.SingularName$Where$roleType.SingularName$
+		{
+			get;
+		}
+
+		bool Exist$associationType.SingularName$Where$roleType.SingularName$
+		{
+			get;
+		}
+
+$endif$
+
+$if(associationType.IsMany)$
+		void AllorsRoleSyncAdd$associationType.FullSingularName$($globalName(associationType.ObjectType)$ association );
+
+		void AllorsRoleSyncRemove$associationType.FullSingularName$($globalName(associationType.ObjectType)$ association );
+
+$else$
+		void AllorsRoleSyncSet$associationType.FullSingularName$($globalName(associationType.ObjectType)$ association );
+
+$endif$
+
+		void AllorsRoleRelease$associationType.FullSingularName$();
+
+$endif$
+>>
+
+domain(domain,settings) ::= <<
+using System;
+using System.Collections;
+using System.Text;
+using System.Xml;
+
+namespace $namespace()$.AllorsGenerated
+{
+	/// <summary>
+	/// AllorsObjects are objects that are held in an AllorsPopulation
+	/// and their lifecycle is managed through an AllorsSession.
+	/// </summary>
+	public interface AllorsEmbeddedObject
+	{
+		AllorsEmbeddedSession AllorsSession { get; }
+
+		int AllorsObjectId { get; }
+
+		System.Guid AllorsObjectTypeId { get; }
+
+		void Delete();
+
+		bool IsDeleted { get; }
+	}
+
+	/// <summary>
+	/// An AllorsSession is a transactional session that
+	/// provides lifecycle management to objects in the population.
+	/// Transactions are 'rolling'. After committing or rolling back
+	/// a transaction an new transaction is automatically started,
+	/// there is no need to manually 'begin' a transaction.
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	public class AllorsEmbeddedSession 
+	{
+		/// <summary>
+		/// The <see cref="currentId"/> field holds the highest id issued.
+		/// </summary>
+		System.Int32 currentId = 0;
+
+		/// <summary>
+		/// The <see cref="allorsObjects"/> field holds all of <see cref="AllorsEmbeddedObject"/>s in this poulation keyed by their ids.
+		/// </summary>
+		System.Collections.Hashtable allorsObjects = new System.Collections.Hashtable();
+
+		/// <summary>
+		/// The <see cref="state"/> field holds a Dictionary of user supplied key/value pairs.
+		/// </summary>
+		System.Collections.Hashtable state = new System.Collections.Hashtable();
+
+		/// <summary>
+		/// Session state are simple key/value pairs.
+		/// Because AllorsObjects can not hold instance variables, this is the only way
+		/// for AllorsObjects to hold references to Non-Allors objects or Allors objects
+		/// from a different population.
+		/// </summary>
+		/// <value>The properties.</value>
+		public object this[string name]
+		{
+		    get { return state[name]; }
+		    set { state[name] = value; }
+		}
+
+		/// <summary>
+		/// Commits all changes that where made during this transaction.
+		/// Because transactions are rolling, a new transaction is automatically created.
+		/// </summary>
+		public void Commit()
+		{
+		}
+
+		/// <summary>
+		/// Rolls back all changes that where made during this transaction.
+		/// Because transactions are rolling, a new transaction is automatically created.
+		/// </summary>
+		public void Rollback()
+		{
+			throw new System.Exception("Rollback not supported on Memory Profile");
+		}
+
+		internal void Delete( AllorsEmbeddedObject allorsObject ) 
+		{
+			allorsObjects.Remove(allorsObject.AllorsObjectId);
+		}
+
+		/// <summary>
+		/// Creates an Extent for the specified ObjectType.
+		/// </summary>
+		/// <param name="objectType">The ObjectType.</param>
+		/// <returns></returns>
+		public AllorsEmbeddedObject[] Extent(AllorsEmbeddedObjectType objectType)
+		{
+			System.Collections.ArrayList extent = new System.Collections.ArrayList();
+			foreach( System.Object allorsObject in allorsObjects.Values)
+			{
+				if( objectType.ConcreteClasses.Contains(allorsObject.GetType()) )
+				{
+					extent.Add(allorsObject);
+				}
+			}
+			return extent.ToArray(objectType.Type) as AllorsEmbeddedObject[];
+		}
+
+		/// <summary>
+		/// Creates an Extent for the whole population.
+		/// </summary>
+		/// <returns></returns>
+		public AllorsEmbeddedObject[] Extent()
+	    {
+            ArrayList extent = new ArrayList(allorsObjects.Values);
+            return extent.ToArray(typeof(AllorsEmbeddedObject)) as AllorsEmbeddedObject[];
+        }
+
+		/// <summary>
+		/// Instantiates an Allors Object.
+		/// </summary>
+		/// <param name="objectId">The object id.</param>
+		/// <returns></returns>
+		public AllorsEmbeddedObject Instantiate( int objectId ) 
+		{
+			return (AllorsEmbeddedObject)allorsObjects[objectId];
+		}
+
+		/// <summary>
+		/// Creates an Allors Object.
+		/// </summary>
+		/// <param name="objectType">The ObjectType.</param>
+		/// <returns>a new <see cref="AllorsEmbeddedObject"/></returns>
+		public AllorsEmbeddedObject Create(AllorsEmbeddedObjectType objectType) 
+		{
+			return Create(objectType, ++currentId );
+		}
+
+		/// <summary>
+		/// Inserts an Allors Object with the specified id.
+		/// </summary>
+		/// <param name="objectType">The <see cref="AllorsEmbeddedObjectType"/>.</param>
+		/// <param name="objectId">The object id.</param>
+		/// <returns></returns>
+		public AllorsEmbeddedObject Insert(AllorsEmbeddedObjectType objectType, int objectId) 
+		{
+		    if(allorsObjects.ContainsKey(objectId))
+		    {
+			throw new Exception("Object with id " + objectId + " already exists");
+		    }
+		    return Create(objectType, objectId);
+		}
+
+		/// <param name="type">The ObjectType.</param>
+		/// <param name="id">The Object Id.</param>
+		/// <returns>a new <see cref="AllorsEmbeddedObject"/></returns>
+		AllorsEmbeddedObject Create(AllorsEmbeddedObjectType type, int id) 
+		{
+			if( id > currentId ) {
+				currentId = id;
+			}
+
+			AllorsEmbeddedObject allorsObject = null;
+			switch(type.Tag)
+			{
+$domain.ConcreteCompositeObjectTypes:{objectType|
+				case AllorsTypeTags.$objectType.Name$:
+					allorsObject = new $globalName(objectType)$(this,id);
+				break;
+}$
+				default:
+					throw new System.ArgumentException("Unkown type");
+			}
+
+			allorsObjects[allorsObject.AllorsObjectId] = allorsObject;
+			return allorsObject;
+		}
+
+		/// <summary>
+		/// Saves the population to the <see cref="XmlWriter"/>.
+		/// </summary>
+		/// <param name="writer">The writer.</param>
+		public void Save(XmlWriter writer)
+		{
+		    bool writeDocument = false;
+		    if (writer.WriteState == WriteState.Start)
+		    {
+			writer.WriteStartDocument();
+			writeDocument = true;
+		    }
+		    writer.WriteStartElement(AllorsEmbeddedXml.ALLORS);
+		    writer.WriteAttributeString(AllorsEmbeddedXml.VERSION, AllorsEmbeddedXml.VERSION_CURRENT);
+
+		    SavePopulation(writer);
+
+		    writer.WriteEndElement();
+		    if (writeDocument)
+		    {
+			writer.WriteEndDocument();
+		    }
+		}
+
+		/// <param name="writer">The writer.</param>
+		private void SavePopulation(XmlWriter writer)
+		{
+		    writer.WriteStartElement(AllorsEmbeddedXml.POPULATION);
+
+		    Hashtable embeddedObjectsByObjectTypeId = new Hashtable();
+		    foreach (AllorsEmbeddedObject embeddedObject in allorsObjects.Values)
+		    {
+			ArrayList strategies = (ArrayList)embeddedObjectsByObjectTypeId[embeddedObject.AllorsObjectTypeId];
+			if (strategies == null)
+			{
+			    strategies = new ArrayList();
+			}
+			strategies.Add(embeddedObject);
+			embeddedObjectsByObjectTypeId[embeddedObject.AllorsObjectTypeId] = strategies;
+		    }
+
+		    writer.WriteStartElement(AllorsEmbeddedXml.OBJECTS);
+		    SaveObjects(writer, embeddedObjectsByObjectTypeId);
+		    writer.WriteEndElement();
+
+		    writer.WriteStartElement(AllorsEmbeddedXml.RELATIONS);
+		    SaveRelations(writer, embeddedObjectsByObjectTypeId);
+		    writer.WriteEndElement();
+
+		    writer.WriteEndElement();
+		}
+
+		/// <param name="writer">The writer.</param>
+		/// <param name="embeddedObjectsByObjectTypeId">The embedded objects by object type id.</param>
+		private void SaveObjects(XmlWriter writer, Hashtable embeddedObjectsByObjectTypeId)
+		{
+		    foreach (System.Guid type in embeddedObjectsByObjectTypeId.Keys)
+		    {
+			ArrayList strategies = (ArrayList) embeddedObjectsByObjectTypeId[type];
+
+			if(strategies.Count>0)
+			{
+			    writer.WriteStartElement(AllorsEmbeddedXml.OBJECT_TYPE);
+			    writer.WriteAttributeString(AllorsEmbeddedXml.ID, type.ToString());
+
+			    for (int i = 0; i < strategies.Count; i++)
+			    {
+				AllorsEmbeddedObject embeddedObject = (AllorsEmbeddedObject)strategies[i];
+				if (i > 0)
+				{
+				    writer.WriteString(AllorsEmbeddedXml.OBJECTS_SPLITTER);
+				}
+				writer.WriteString(embeddedObject.AllorsObjectId.ToString());
+			    }
+			    writer.WriteEndElement();
+			}
+		    }
+		}
+
+		/// <param name="writer">The writer.</param>
+		/// <param name="strategiesByObjectType">The strategies by object type.</param>
+		private void SaveRelations(XmlWriter writer, Hashtable strategiesByObjectType)
+		{
+		    foreach (AllorsEmbeddedRelationType relationType in AllorsEmbeddedDomain.RelationByTag.Values)
+		    {
+			bool relationsExist = false;
+
+			foreach (AllorsEmbeddedObjectType objectType in relationType.ConcreteClassHierarchy)
+			{
+			    ArrayList embeddedObjects = (ArrayList)strategiesByObjectType[objectType.Id];
+			    if (embeddedObjects != null)
+			    {
+				foreach (AllorsEmbeddedObject embeddedObject in embeddedObjects)
+				{
+					object role = ((AllorsInternal)embeddedObject).GetRole(relationType);
+					if(role!=null)
+					{
+						AllorsEmbeddedObject[] roles = role as AllorsEmbeddedObject[];
+						if (roles != null && roles.Length == 0)
+						{
+							continue;
+						}
+
+						if(!relationsExist)
+						{
+							if(relationType.IsUnit)
+							{
+								writer.WriteStartElement(AllorsEmbeddedXml.RELATION_TYPE_UNIT);
+							}
+							else
+							{
+								writer.WriteStartElement(AllorsEmbeddedXml.RELATION_TYPE_COMPOSITE);
+							}
+							writer.WriteAttributeString(AllorsEmbeddedXml.ID, relationType.Id.ToString());
+							relationsExist = true;
+						}
+						
+						writer.WriteStartElement(AllorsEmbeddedXml.RELATION);
+						writer.WriteAttributeString(AllorsEmbeddedXml.ASSOCIATION, XmlConvert.ToString(embeddedObject.AllorsObjectId));
+
+						if (relationType.IsUnit)
+						{
+							switch (relationType.Type.Tag)
+							{
+								case AllorsTypeTags.AllorsString:
+									writer.WriteString((string)role);
+									break;
+								case AllorsTypeTags.AllorsInteger:
+								    writer.WriteString(XmlConvert.ToString((int)role));
+								    break;
+								case AllorsTypeTags.AllorsLong:
+								    writer.WriteString(XmlConvert.ToString((long)role));
+								    break;
+								case AllorsTypeTags.AllorsDecimal:
+								    writer.WriteString(XmlConvert.ToString((decimal)role));
+								    break;
+								case AllorsTypeTags.AllorsDouble:
+								    writer.WriteString(XmlConvert.ToString((double)role));
+								    break;
+								case AllorsTypeTags.AllorsBoolean:
+								    writer.WriteString(XmlConvert.ToString((bool)role));
+								    break;
+								case AllorsTypeTags.AllorsDate:
+								    writer.WriteString(XmlConvert.ToString((System.DateTime)role, XmlDateTimeSerializationMode.Utc));
+								    break;
+								case AllorsTypeTags.AllorsDateTime:
+								    writer.WriteString(XmlConvert.ToString((System.DateTime)role,XmlDateTimeSerializationMode.Utc));
+								    break;
+								case AllorsTypeTags.AllorsUnique:
+								    writer.WriteString(XmlConvert.ToString((System.Guid)role));
+								    break;
+								case AllorsTypeTags.AllorsBinary:
+								    writer.WriteString(Convert.ToBase64String((byte[])role));
+								    break;
+								default:
+									throw new System.ArgumentException("Unknown Unit Type: " + relationType.Id.ToString());
+							}
+						}
+						else
+						{
+						    if (relationType.IsMany)
+						    {
+							AllorsEmbeddedObject[] roleObjects = (AllorsEmbeddedObject[])role;
+
+							bool first = true;
+							foreach (AllorsEmbeddedObject roleObject in roleObjects)
+							{
+							    if (first)
+							    {
+								first = false;
+							    }
+							    else
+							    {
+								writer.WriteString(AllorsEmbeddedXml.XML_OBJECTS_SPLITTER_STRING);
+							    }
+							    writer.WriteString(roleObject.AllorsObjectId.ToString());
+							}
+						    }
+						    else
+						    {
+							AllorsEmbeddedObject roleObject = (AllorsEmbeddedObject)role;
+							writer.WriteString(roleObject.AllorsObjectId.ToString());
+						    }
+						}
+						writer.WriteEndElement();
+					}
+				}
+			    }
+			}
+
+			if (relationsExist)
+			{
+			    writer.WriteEndElement();
+			}
+		    }
+		}
+
+		/// <summary>
+		/// Loads the population from the <see cref="XmlReader"/>.
+		/// </summary>
+		/// <param name="reader">The reader.</param>
+		public void Load(XmlReader reader)
+		{
+				currentId = 0;
+				allorsObjects = new System.Collections.Hashtable();
+				state = new System.Collections.Hashtable();
+
+		    while (reader.Read())
+		    {
+			if (reader.IsStartElement())
+			{
+			    if (reader.Name.Equals(AllorsEmbeddedXml.POPULATION))
+			    {
+				LoadRepository(reader);
+			    }
+			}
+		    }
+		}
+
+		/// <param name="reader">The reader.</param>
+		private void LoadRepository(XmlReader reader)
+		{
+		    while (reader.Read())
+		    {
+			switch (reader.NodeType)
+			{
+			    case XmlNodeType.Element:
+				if (reader.Name.Equals(AllorsEmbeddedXml.OBJECTS))
+				{
+				    if (!reader.IsEmptyElement)
+				    {
+					LoadObjects(reader);
+				    }
+				}
+				else if (reader.Name.Equals(AllorsEmbeddedXml.RELATIONS))
+				{
+				    if (!reader.IsEmptyElement)
+				    {
+					LoadRelationTypes(reader);
+				    }
+				}
+				break;
+			    case XmlNodeType.EndElement:
+				return;
+			    default:
+				// eat everything but elements
+				break;
+			}
+		    }
+		}
+
+		/// <param name="reader">The reader.</param>
+		private void LoadObjects(XmlReader reader)
+		{
+		    while (reader.Read())
+		    {
+			switch (reader.NodeType)
+			{
+			    case XmlNodeType.Element:
+				if (reader.Name.Equals(AllorsEmbeddedXml.OBJECT_TYPE))
+				{
+				    if (!reader.IsEmptyElement)
+				    {
+					LoadObjectType(reader);
+				    }
+				}
+				break;
+			    case XmlNodeType.EndElement:
+				return;
+			    default:
+				// eat everything but elements
+				break;
+			}
+		    }
+		}
+
+		/// <param name="reader">The reader.</param>
+		private void LoadObjectType(XmlReader reader)
+		{
+		    var objectTypeId = new System.Guid(reader.GetAttribute(AllorsEmbeddedXml.ID));
+		    AllorsEmbeddedObjectType type = (AllorsEmbeddedObjectType) AllorsEmbeddedDomain.TypeById[objectTypeId];
+
+		    string objectIdsString = reader.ReadString();
+		    string[] objectIds = objectIdsString.Split(AllorsEmbeddedXml.OBJECTS_SPLITTER_CHAR_ARRAY);
+
+		    for (int i = 0; i < objectIds.Length; i++)
+		    {
+			int objectId = Int32.Parse(objectIds[i]);
+
+			if (type == null || !type.IsConcreteComposite)
+			{
+			    throw new System.ArgumentException("ObjectType not compatible" + objectTypeId.ToString());
+			}
+			else
+			{
+			    Create(type, objectId);
+			}
+		    }
+		}
+
+		/// <param name="reader">The reader.</param>
+		private void LoadRelationTypes(XmlReader reader)
+		{
+		    while (reader.Read())
+		    {
+			switch (reader.NodeType)
+			{
+			    case XmlNodeType.Element:
+				if (reader.Name.Equals(AllorsEmbeddedXml.RELATION_TYPE_UNIT))
+				{
+				    if (!reader.IsEmptyElement)
+				    {
+					LoadRelations(reader,true);
+				    }
+				}
+				else if (reader.Name.Equals(AllorsEmbeddedXml.RELATION_TYPE_COMPOSITE))
+				{
+				    if (!reader.IsEmptyElement)
+				    {
+					LoadRelations(reader,false);
+				    }
+				}
+				break;
+			    case XmlNodeType.EndElement:
+				return;
+			    default:
+				// eat everything but elements
+				break;
+			}
+		    }
+		}
+
+		/// <param name="reader">The reader.</param>
+		/// <param name="isUnit">if set to <c>true</c> the relation's Role has an Unit Object Type.</param>
+		private void LoadRelations(XmlReader reader, bool isUnit)
+		{
+		    var relationTypeId = new System.Guid(reader.GetAttribute(AllorsEmbeddedXml.ID));
+		    AllorsEmbeddedRelationType relation = (AllorsEmbeddedRelationType)AllorsEmbeddedDomain.RelationById[relationTypeId];
+
+		    if (!reader.IsEmptyElement)
+		    {
+			if (relation == null ||
+			    relation.IsUnit != isUnit)
+			{
+			    throw new System.ArgumentException("RelationType not compatible" + relationTypeId.ToString());
+			}
+			else
+			{
+			    if (relation.IsUnit)
+			    {
+				LoadUnitRelations(reader, relation);
+			    }
+			    else
+			    {
+				LoadCompositeRelations(reader, relation);
+			    }
+			}
+		    }
+		}
+
+		/// <param name="reader">The reader.</param>
+		/// <param name="relation">The relation.</param>
+		private void LoadUnitRelations(XmlReader reader, AllorsEmbeddedRelationType relation)
+		{
+		    while (reader.Read())
+		    {
+			switch (reader.NodeType)
+			{
+			    case XmlNodeType.Element:
+				if (reader.Name.Equals(AllorsEmbeddedXml.RELATION))
+				{
+				    Int32 a = Int32.Parse(reader.GetAttribute(AllorsEmbeddedXml.ASSOCIATION));
+				    AllorsEmbeddedObject strategy = (AllorsEmbeddedObject) allorsObjects[a];
+				    string value = String.Empty;
+				    if (!reader.IsEmptyElement)
+				    {
+					value = reader.ReadString();
+				    }
+	
+				    if (strategy == null)
+				    {
+					throw new System.ArgumentException("Object not found" + a.ToString());
+				    }
+				    else
+				    {
+									AllorsInternal internalStrategy = (AllorsInternal)strategy;
+					if (reader.IsEmptyElement)
+					{
+					    if (relation.Type.Tag == AllorsTypeTags.AllorsString)
+					    {
+						internalStrategy.SetRole(relation, String.Empty);
+					    }
+					}
+					else
+					{
+					    try
+					    {
+						switch (relation.Type.Tag)
+						{
+						    case AllorsTypeTags.AllorsString:
+							string parameter = value;
+							internalStrategy.SetRole(relation, parameter);
+							break;
+						    case AllorsTypeTags.AllorsInteger:
+							internalStrategy.SetRole(relation, XmlConvert.ToInt32(value));
+							break;
+						    case AllorsTypeTags.AllorsLong:
+							internalStrategy.SetRole(relation, XmlConvert.ToInt64(value));
+							break;
+						    case AllorsTypeTags.AllorsDecimal:
+							internalStrategy.SetRole(relation, XmlConvert.ToDecimal(value));
+							break;
+						    case AllorsTypeTags.AllorsDouble:
+							internalStrategy.SetRole(relation, XmlConvert.ToDouble(value));
+							break;
+						    case AllorsTypeTags.AllorsBoolean:
+							internalStrategy.SetRole(relation, XmlConvert.ToBoolean(value));
+							break;
+						    case AllorsTypeTags.AllorsDate:
+							internalStrategy.SetRole(relation, XmlConvert.ToDateTime(value, XmlDateTimeSerializationMode.Utc));
+							break;
+						    case AllorsTypeTags.AllorsDateTime:
+							internalStrategy.SetRole(relation, XmlConvert.ToDateTime(value, XmlDateTimeSerializationMode.Utc));
+							break;
+						    case AllorsTypeTags.AllorsUnique:
+							internalStrategy.SetRole(relation, XmlConvert.ToGuid(value));
+							break;
+						    case AllorsTypeTags.AllorsBinary:
+							internalStrategy.SetRole(relation, Convert.FromBase64String(value));
+							break;
+						    default:
+							throw new System.ArgumentException("Unknown Unit Type: " + relation.Type.Id.ToString());
+						}
+					    }
+					    catch
+					    {
+						throw new System.ArgumentException("Unknown Unit Type: " + relation.Type.Id.ToString());
+					    }
+					}
+				    }
+				}
+				break;
+			    case XmlNodeType.EndElement:
+				return;
+			    default:
+				// eat everything but elements
+				break;
+			}
+		    }
+		}
+
+		/// <param name="reader">The reader.</param>
+		/// <param name="relation">The relation.</param>
+		private void LoadCompositeRelations(XmlReader reader, AllorsEmbeddedRelationType relation)
+		{
+		    while (reader.Read())
+		    {
+			switch (reader.NodeType)
+			{
+			    case XmlNodeType.Element:
+				if (reader.Name.Equals(AllorsEmbeddedXml.RELATION))
+				{
+				    Int32 a = Int32.Parse(reader.GetAttribute(AllorsEmbeddedXml.ASSOCIATION));
+				    AllorsEmbeddedObject strategy = (AllorsEmbeddedObject) allorsObjects[a];
+	
+				    string value = String.Empty;
+				    if (!reader.IsEmptyElement)
+				    {
+					value = reader.ReadString();
+				    }
+	
+				    if (!reader.IsEmptyElement)
+				    {
+					string roleIdsString = value;
+					string[] roleIds = roleIdsString.Split(AllorsEmbeddedXml.XML_OBJECTS_SPLITTER);
+	
+					if (strategy == null ||
+					    (relation.IsOne && roleIds.Length != 1))
+					{
+					    throw new System.ArgumentException("Too many roles for relation " + relation.Type.Id.ToString());
+					}
+					else
+					{
+						AllorsInternal internalStrategy = (AllorsInternal)strategy;
+					    if (relation.IsOne)
+					    {
+							int r = Int32.Parse(roleIds[0]);
+							AllorsEmbeddedObject roleObject = (AllorsEmbeddedObject) allorsObjects[r];
+							if (roleObject == null)
+							{
+								throw new System.ArgumentException("Object not found" + r.ToString());
+							}
+							else
+							{
+								internalStrategy.SetRole(relation, roleObject);
+							}
+							}
+							else
+							{
+							AllorsEmbeddedObject[] roleObjects = (AllorsEmbeddedObject[]) Array.CreateInstance(relation.Type.Type,roleIds.Length);
+							for (int i = 0; i < roleIds.Length; i++)
+							{
+													int r = Int32.Parse(roleIds[i]);
+								AllorsEmbeddedObject roleObject = (AllorsEmbeddedObject) allorsObjects[r];
+								if (roleObject == null)
+								{
+								throw new System.ArgumentException("Object not found" + r.ToString());
+								}
+								else
+								{
+								roleObjects[i] = roleObject;
+								}
+							}
+							internalStrategy.SetRole(relation, roleObjects);
+							}
+						}
+				    }
+				}
+				break;
+			    case XmlNodeType.EndElement:
+				return;
+			    default:
+				// eat everything but elements
+				break;
+			}
+		    }
+		}
+	}
+
+	/// <summary>
+	/// An <see cref="AllorsEmbeddedObjectType"/> defines the state and behavior for
+	/// a Set of <see cref="AllorsEmbeddedObject"/>s.
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	public class AllorsEmbeddedObjectType
+	{
+		internal readonly Guid Id;
+
+		internal readonly bool IsConcreteComposite;
+
+		internal readonly int Tag;	
+
+		internal readonly Type Type;
+
+	    internal readonly System.Collections.Generic.List<Type> ConcreteClasses;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AllorsEmbeddedObjectType"/> class.
+		/// </summary>
+		/// <param name="id">The id.</param>
+		/// <param name="type">The type.</param>
+		/// <param name="isConcreteComposite">if set to <c>true</c> then this type is a Concrete Composite Type.</param>
+		internal AllorsEmbeddedObjectType(Guid id, Type type, bool isConcreteComposite) : this(id,type,isConcreteComposite,-1){}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AllorsEmbeddedObjectType"/> class.
+		/// </summary>
+		/// <param name="id">The id.</param>
+		/// <param name="type">The type.</param>
+		/// <param name="isConcreteComposite">if set to <c>true</c> then this type is a Concrete Composite Type.</param>
+		/// <param name="tag">The tag.</param>
+		internal AllorsEmbeddedObjectType(Guid id, Type type, bool isConcreteComposite, int tag)
+		{
+			this.Id = id;
+			this.IsConcreteComposite = isConcreteComposite;
+			this.Tag = tag;
+			this.Type = type;
+			
+			this.ConcreteClasses = new System.Collections.Generic.List<Type>();
+		}
+	}
+
+	/// <summary>
+	/// An <see cref="AllorsEmbeddedRelationType"/> defines the state and behavior for
+	/// a Set of relations.
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	public class AllorsEmbeddedRelationType
+	{
+		private static AllorsEmbeddedObjectType[] EmptyEmbeddedObjectTypeArray = new AllorsEmbeddedObjectType[0];
+
+		internal readonly Guid Id;
+
+		internal readonly int Tag;
+
+		internal readonly string Name;
+
+		internal readonly AllorsEmbeddedObjectType Type;
+
+		internal readonly bool IsUnit;
+
+		internal readonly bool IsMany;
+
+		internal readonly ArrayList ConcreteClassHierarchy;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AllorsEmbeddedRelationType"/> class.
+		/// </summary>
+		/// <param name="id">The id.</param>
+		/// <param name="tag">The tag.</param>
+		/// <param name="name">The name.</param>
+		/// <param name="type">The type.</param>
+		/// <param name="IsUnit">if set to <c>true</c> the Role's Object Type is a Unit.</param>
+		/// <param name="isMany">if set to <c>true</c> the Role's multiplicity is Many.</param>
+		internal AllorsEmbeddedRelationType(Guid id, int tag, string name, AllorsEmbeddedObjectType type, bool IsUnit, bool isMany)
+		{
+			this.Id = id;
+			this.Tag = tag;
+			this.Name = name;
+			this.Type = type;
+			this.IsUnit = IsUnit;
+			this.IsMany = isMany;
+			this.ConcreteClassHierarchy = new ArrayList(1);
+		}
+
+		/// <summary>
+		/// Gets a value indicating whether this relation has a Role with multiplicity one.
+		/// </summary>
+		/// <value><c>true</c> if this instance has a Role with multiplicity one; otherwise, <c>false</c>.</value>
+		internal bool IsOne
+		{
+			get
+			{
+				return !IsMany;
+			}
+		}
+
+	}
+
+	/// <summary>
+	/// An AllorsEmbeddedDomain groups related <see cref="AllorsEmbeddedRelationType"/>s and
+	/// <see cref="AllorsEmbeddedObjectType"/>s
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	public class AllorsEmbeddedDomain
+	{
+		internal static readonly Hashtable RelationByTag;
+
+		internal static readonly Hashtable RelationById;
+
+		internal static readonly Hashtable TypeById;
+
+		/// <summary>
+		/// Lookups the relation by tag.
+		/// </summary>
+		/// <param name="tag">The tag.</param>
+		/// <returns></returns>
+		public static AllorsEmbeddedRelationType LookupRelationByTag(string tag)
+		{
+		    return (AllorsEmbeddedRelationType)RelationByTag[tag];
+		}
+
+		/// <summary>
+		/// Lookups the relation by id.
+		/// </summary>
+		/// <param name="id">The id.</param>
+		/// <returns></returns>
+		public static AllorsEmbeddedRelationType LookupRelationById(Guid id)
+		{
+		    return (AllorsEmbeddedRelationType)RelationById[id];
+		}
+
+		/// <summary>
+		/// Lookups the type by id.
+		/// </summary>
+		/// <param name="id">The id.</param>
+		/// <returns></returns>
+		public static AllorsEmbeddedObjectType LookupTypeById(Guid id)
+		{
+		    return (AllorsEmbeddedObjectType) TypeById[id];
+		}
+
+		#region Types
+$domain.ObjectTypes:{objectType|$domainObjectType(objectType)$
+}$
+		#endregion
+		
+		#region Relations
+$domain.RelationTypes:{relationType|$domainRelationType(relationType)$
+}$
+		#endregion
+
+		/// <summary>
+		/// Initializes the <see cref="AllorsEmbeddedDomain"/> class.
+		/// </summary>
+		static AllorsEmbeddedDomain()
+		{
+			RelationByTag = new Hashtable();
+			RelationById = new Hashtable();
+			TypeById = new Hashtable();
+			#region Types
+			$domain.ObjectTypes:{objectType|TypeById[$objectType.Name$.Id] = $objectType.Name$;
+}$
+
+$domain.ObjectTypes:{objectType|$objectType.ConcreteClasses:{concreteClass|
+		$objectType.Name$.ConcreteClasses.Add($concreteClass.Name$.Type);
+}$}$
+			#endregion
+
+			#region Relations
+			$domain.RelationTypes:{relationType|RelationByTag[$relationType.Name$.Tag] = $relationType.Name$;
+			RelationById[$relationType.Name$.Id] = $relationType.Name$;
+}$
+			#endregion
+
+			#region Relations CompositeHierarchy
+			ArrayList types = new ArrayList();
+$domain.RelationTypes:{relationType|$relationTypeCompositeHierarchy(relationType=relationType)$}$
+			#endregion
+		}
+	}
+
+	/// <summary>
+	/// The <see cref="AllorsInternal"/> interface needs to be implemented by
+	/// <see cref="AllorsEmbeddedObject"/>s. It's is required for managing the
+	/// Relations.
+	/// </summary>
+	internal interface AllorsInternal
+	{
+		/// <param name="relation">The relation.</param>
+		/// <returns></returns>
+		object GetRole(AllorsEmbeddedRelationType relation);
+
+		/// <param name="relation">The relation.</param>
+	    /// <param name="role">The role. </param>
+		/// <returns></returns>
+		void SetRole(AllorsEmbeddedRelationType relation, object role);
+	}
+
+	/// <summary>
+	/// The <see cref="AllorsEmbeddedArrays"/> class is a Utility class 
+	/// for maniupulating <see cref="Array"/>'s.
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	internal class AllorsEmbeddedArrays
+	{
+		/// <summary>
+		/// Checks if the object exists in this Array.
+		/// </summary>
+		/// <param name="objectArray">The object array.</param>
+		/// <param name="value">The value.</param>
+		/// <returns>true if the object exists in this Array</returns>
+		internal static bool Exist(AllorsEmbeddedObject[] objectArray, AllorsEmbeddedObject value)
+		{
+			foreach( AllorsEmbeddedObject objectArrayValue in objectArray )
+			{
+				if( objectArrayValue.Equals(value) )
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		/// <summary>
+		/// Adds the specified object to the Array.
+		/// </summary>
+		/// <param name="objectArray">The object array.</param>
+		/// <param name="value">The object.</param>
+		/// <returns>The new object Array</returns>
+		internal static AllorsEmbeddedObject[] Add(AllorsEmbeddedObject[] objectArray, AllorsEmbeddedObject value)
+		{
+			AllorsEmbeddedObject[] newObjectArray = (AllorsEmbeddedObject[]) Array.CreateInstance(objectArray.GetType().GetElementType(), objectArray.Length+1);
+			System.Array.Copy(objectArray,0,newObjectArray,0,objectArray.Length);
+			newObjectArray[objectArray.Length] = value;
+			return newObjectArray;
+		}
+
+		/// <summary>
+		/// Removes the specified object array.
+		/// </summary>
+		/// <param name="objectArray">The object array.</param>
+		/// <param name="value">The object.</param>
+		/// <returns>The new object Array</returns>
+		internal static AllorsEmbeddedObject[] Remove(AllorsEmbeddedObject[] objectArray, AllorsEmbeddedObject value)
+		{
+			System.Collections.ArrayList newObjectArrayList = new System.Collections.ArrayList(objectArray);
+			newObjectArrayList.Remove(value);
+			return newObjectArrayList.ToArray(objectArray.GetType().GetElementType()) as AllorsEmbeddedObject[];
+		}
+
+$domain.CompositeObjectTypes:{it|$domainCompositeObjectType(it)$}$
+	}
+
+	/// <summary>
+	/// The <see cref="AllorsEmbeddedXml"/> class defines the tags and
+	/// constants necessary for saving and loading populations to Xml files.
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	public class AllorsEmbeddedXml
+	{
+		internal static readonly string ALLORS = "allors";
+
+		internal static readonly string VERSION = "version";
+
+		internal static readonly string VERSION_CURRENT = "1";
+
+		internal static readonly string POPULATION = "population";
+
+		internal static readonly string OBJECTS = "objects";
+
+		internal static readonly string RELATIONS = "relations";
+
+		internal static readonly string OBJECT_TYPE = "ot";
+
+		internal static readonly string OBJECTS_SPLITTER = ",";
+
+		internal static readonly char[] OBJECTS_SPLITTER_CHAR_ARRAY = { OBJECTS_SPLITTER[0] };
+
+		internal static readonly string ID = "i";
+
+		internal static readonly string RELATION_TYPE_COMPOSITE = "rtc";
+
+		internal static readonly string RELATION_TYPE_UNIT = "rtu";
+
+		internal static readonly string RELATION = "r";
+
+		internal static readonly string ASSOCIATION = "a";
+
+		internal static readonly string DOMAIN_ID = "id";
+
+		internal static readonly string NAME = "name";
+		
+		internal static readonly char XML_OBJECTS_SPLITTER = ',';
+
+		internal static readonly string XML_OBJECTS_SPLITTER_STRING = XML_OBJECTS_SPLITTER.ToString();
+
+
+		internal static readonly char XML_OBJECT_SPLITTER = ':';
+
+		internal static readonly string XML_OBJECT_SPLITTER_STRING = XML_OBJECT_SPLITTER.ToString();
+
+		internal static readonly char XML_OBJECT_PART_SPLITTER = '@';
+
+		internal static readonly string XML_OBJECT_PART_SPLITTER_STRING = XML_OBJECT_PART_SPLITTER.ToString();
+	}
+
+	/// <summary>
+	/// The <see cref="AllorsTypeTags"/> hold the tags for all <see cref="AllorsEmbeddedObject"/>s
+	/// in this <see cref="AllorsEmbeddedDomain"/>.
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	internal class AllorsTypeTags
+	{
+$domain.ObjectTypes:{objectType|				internal const int $objectType.Name$ = $i$;
+}$
+	}
+
+	/// <summary>
+	/// The <see cref="AllorsRelationTags"/> hold the tags for all relations
+	/// in this <see cref="AllorsEmbeddedDomain"/>.
+	/// </summary>
+	[System.Diagnostics.DebuggerNonUserCode]
+	internal class AllorsRelationTags
+	{
+$domain.RelationTypes:{relationType|			internal const int $relationType.Name$ = $i$;
+}$
+	}
+}
+>>
+
+domainObjectType(objectType) ::= <<
+		/// <summary>
+		/// The $objectType.SingularName$ Object Type.
+		/// </summary>
+		public static AllorsEmbeddedObjectType $objectType.SingularName$ = new AllorsEmbeddedObjectType(new Guid("$objectType.Id$"), typeof($globalName(objectType)$), $boolean(objectType.IsConcreteComposite)$ , AllorsTypeTags.$objectType.Name$ );
+
+>>
+
+domainRelationType(relationType) ::= <<
+		/// <summary>
+		/// The $relationType.Name$ Relation Type.
+		/// </summary>
+		public static AllorsEmbeddedRelationType $relationType.Name$ = new AllorsEmbeddedRelationType(new Guid("$relationType.Id$"),AllorsRelationTags.$relationType.Name$,"$relationType.RoleType.HierarchySingularName$", $relationType.RoleType.ObjectType.SingularName$, $boolean(relationType.RoleType.ObjectType.IsUnit)$, $boolean(relationType.RoleType.IsMany)$);
+
+>>
+
+domainCompositeObjectType(objectType) ::= <<
+		/// <summary>
+		/// An empty array of $objectType.PluralName$.
+		/// </summary>
+		internal static $globalName(objectType)$[] EMPTY_$objectType.SingularName$_ARRAY = {};
+
+>>
+
+relationTypeCompositeHierarchy(relationType) ::= <<
+			$relationType.AssociationType.ObjectType.ConcreteClasses:{objectType|$relationType.Name$.ConcreteClassHierarchy.Add($objectType.Name$);
+}$
+>>
+
+internalInterfaceRoleType(roleType) ::= "$namespace()$.AllorsGenerated.AllorsInternal$roleType.AssociationType.ObjectType.SingularName$"
+
+internalInterfaceAssociationType(associationType) ::= "$namespace()$.AllorsGenerated.AllorsInternal$associationType.RoleType.ObjectType.SingularName$"
+
+boolean(value) ::= "$if(value)$true$else$false$endif$"
+
+globalName(objectType) ::= <%
+$if(objectType.IsBinary)$
+	global::System.Byte[]
+$elseif(objectType.IsBoolean)$
+	global::System.Boolean
+$elseif(objectType.IsDecimal)$
+	global::System.Decimal
+$elseif(objectType.IsDouble)$
+	global::System.Double
+$elseif(objectType.IsInteger)$
+	global::System.Int32
+$elseif(objectType.IsLong)$
+	global::System.Int64
+$elseif(objectType.IsString)$
+	global::System.String
+$elseif(objectType.IsUnique)$
+	global::System.Guid
+$else$
+	global::$namespace()$.$objectType.SingularName$
+$endif$
+%>
+
+namespace() ::= <%
+$if(settings.existAllors)$
+	$if(settings.allors.ExistNamespace)$
+		$settings.allors.namespace$
+	$endif$
+$else$
+	EmbeddedDomain
+$endif$
+%>

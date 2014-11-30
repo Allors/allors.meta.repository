@@ -1,0 +1,8 @@
+<template allors="1.0">
+  <name>Uml</name>
+  <output>../../../Allors.R1.Framework.Uml</output>
+  <settings key="allors.namespace">
+    <value>Uml</value>
+  </settings>
+  <source>file:///C:/Allors/templates/Allors.Templates/allors.csharp.uml.stg</source>
+</template>
