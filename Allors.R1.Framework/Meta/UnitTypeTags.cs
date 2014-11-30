@@ -39,11 +39,6 @@ namespace Allors.R1.Meta
         AllorsBoolean,
 
         /// <summary>
-        /// The tag for the date time <see cref="ObjectType"/>.
-        /// </summary>
-        AllorsDateTime,
-
-        /// <summary>
         /// The tag for the decimal <see cref="ObjectType"/>.
         /// </summary>
         AllorsDecimal,
@@ -51,17 +46,12 @@ namespace Allors.R1.Meta
         /// <summary>
         /// The tag for the double <see cref="ObjectType"/>.
         /// </summary>
-        AllorsDouble,
+        AllorsFloat,
 
         /// <summary>
         /// The tag for the integer <see cref="ObjectType"/>.
         /// </summary>
         AllorsInteger,
-
-        /// <summary>
-        /// The tag for the long integer <see cref="ObjectType"/>.
-        /// </summary>
-        AllorsLong,
 
         /// <summary>
         /// The tag for the string <see cref="ObjectType"/>.

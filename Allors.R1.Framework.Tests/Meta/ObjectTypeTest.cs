@@ -1609,11 +1609,9 @@ namespace Allors.R1.Meta.Static
 
             Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("ad7f5ddc-bedb-4aaa-97ac-d6693a009ba9"))).IsString);
             Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("ccd6f134-26de-4103-bff9-a37ec3e997a3"))).IsInteger);
-            Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("e8989069-024b-4389-ac77-a98c4dfff25a"))).IsLong);
             Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("da866d8e-2c40-41a8-ae5b-5f6dae0b89c8"))).IsDecimal);
             Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("ffcabd07-f35f-4083-bef6-f6c47970ca5d"))).IsDouble);
             Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("b5ee6cea-4e2b-498e-a5dd-24671d896477"))).IsBoolean);
-            Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("c4c09343-61d3-418c-ade2-fe6fd588f128"))).IsDateTime);
             Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("6DC0A1A8-88A4-4614-ADB4-92DD3D017C0E"))).IsUnique);
             Assert.IsTrue(((ObjectType)this.Domain.Domain.Find(new Guid("c28e515b-cae8-4d6b-95bf-062aec8042fc"))).IsBinary);
         }

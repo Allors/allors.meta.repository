@@ -411,20 +411,6 @@ namespace Allors.R1.Meta
         }
 
         /// <summary>
-        /// Get the value of the association on this object.
-        /// </summary>
-        /// <param name="strategy">
-        /// The strategy.
-        /// </param>
-        /// <returns>
-        /// The association value.
-        /// </returns>
-        public override object Get(IStrategy strategy)
-        {
-            return strategy.GetAssociation(this);
-        }
-
-        /// <summary>
         /// Deletes this instance.
         /// </summary>
         /// <exception cref="NotSupportedException">

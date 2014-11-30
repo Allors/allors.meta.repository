@@ -1518,15 +1518,6 @@ namespace Allors.R1.Meta
                 allorsUnitTypes.Add(objectType);
             }
 
-            if (this.Domain.Find(UnitTypeIds.LongId) == null)
-            {
-                var objectType = this.AddDeclaredObjectType(UnitTypeIds.LongId);
-                objectType.SingularName = UnitTypeTags.AllorsLong.ToString();
-                objectType.PluralName = objectType.SingularName + DefaultPluralForm;
-                objectType.UnitTag = (int)UnitTypeTags.AllorsLong;
-                allorsUnitTypes.Add(objectType);
-            }
-
             if (this.Domain.Find(UnitTypeIds.DecimalId) == null)
             {
                 var objectType = this.AddDeclaredObjectType(UnitTypeIds.DecimalId);
@@ -1536,12 +1527,12 @@ namespace Allors.R1.Meta
                 allorsUnitTypes.Add(objectType);
             }
 
-            if (this.Domain.Find(UnitTypeIds.DoubleId) == null)
+            if (this.Domain.Find(UnitTypeIds.FloatId) == null)
             {
-                var objectType = this.AddDeclaredObjectType(UnitTypeIds.DoubleId);
-                objectType.SingularName = UnitTypeTags.AllorsDouble.ToString();
+                var objectType = this.AddDeclaredObjectType(UnitTypeIds.FloatId);
+                objectType.SingularName = UnitTypeTags.AllorsFloat.ToString();
                 objectType.PluralName = objectType.SingularName + DefaultPluralForm;
-                objectType.UnitTag = (int)UnitTypeTags.AllorsDouble;
+                objectType.UnitTag = (int)UnitTypeTags.AllorsFloat;
                 allorsUnitTypes.Add(objectType);
             }
 
@@ -1554,18 +1545,9 @@ namespace Allors.R1.Meta
                 allorsUnitTypes.Add(objectType);
             }
 
-            if (this.Domain.Find(UnitTypeIds.DatetimeId) == null)
+            if (this.Domain.Find(UnitTypeIds.UniqueId) == null)
             {
-                var objectType = this.AddDeclaredObjectType(UnitTypeIds.DatetimeId);
-                objectType.SingularName = UnitTypeTags.AllorsDateTime.ToString();
-                objectType.PluralName = objectType.SingularName + DefaultPluralForm;
-                objectType.UnitTag = (int)UnitTypeTags.AllorsDateTime;
-                allorsUnitTypes.Add(objectType);
-            }
-
-            if (this.Domain.Find(UnitTypeIds.Unique) == null)
-            {
-                var objectType = this.AddDeclaredObjectType(UnitTypeIds.Unique);
+                var objectType = this.AddDeclaredObjectType(UnitTypeIds.UniqueId);
                 objectType.SingularName = UnitTypeTags.AllorsUnique.ToString();
                 objectType.PluralName = objectType.SingularName + DefaultPluralForm;
                 objectType.UnitTag = (int)UnitTypeTags.AllorsUnique;

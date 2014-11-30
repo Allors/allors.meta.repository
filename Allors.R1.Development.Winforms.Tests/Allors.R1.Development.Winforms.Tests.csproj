@@ -135,7 +135,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="BeforeBuild">
   </Target>
-  <UsingTask TaskName="Substitute" AssemblyFile="..\external\allors\binary\Allors.Binary.dll" />
+  <UsingTask TaskName="Substitute" AssemblyFile="..\external\binary\Allors.Binary.dll" />
   <Target Name="AfterBuild">
     <Substitute Input="bin\debug\Allors.R1.Development.Winforms.dll" Substitutes="bin\debug\Allors.Testing.Winforms.dll" />
   </Target>

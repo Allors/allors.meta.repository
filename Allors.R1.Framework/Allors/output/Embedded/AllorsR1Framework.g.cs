@@ -329,9 +329,6 @@ namespace Allors.R1.Meta.AllorsGenerated
 								case AllorsTypeTags.AllorsBoolean:
 								    writer.WriteString(XmlConvert.ToString((bool)role));
 								    break;
-								case AllorsTypeTags.AllorsDate:
-								    writer.WriteString(XmlConvert.ToString((System.DateTime)role, XmlDateTimeSerializationMode.Utc));
-								    break;
 								case AllorsTypeTags.AllorsDateTime:
 								    writer.WriteString(XmlConvert.ToString((System.DateTime)role,XmlDateTimeSerializationMode.Utc));
 								    break;
@@ -604,9 +601,6 @@ namespace Allors.R1.Meta.AllorsGenerated
 							break;
 						    case AllorsTypeTags.AllorsBoolean:
 							internalStrategy.SetRole(relation, XmlConvert.ToBoolean(value));
-							break;
-						    case AllorsTypeTags.AllorsDate:
-							internalStrategy.SetRole(relation, XmlConvert.ToDateTime(value, XmlDateTimeSerializationMode.Utc));
 							break;
 						    case AllorsTypeTags.AllorsDateTime:
 							internalStrategy.SetRole(relation, XmlConvert.ToDateTime(value, XmlDateTimeSerializationMode.Utc));
@@ -940,10 +934,6 @@ namespace Allors.R1.Meta.AllorsGenerated
 		/// </summary>
 		public static AllorsEmbeddedObjectType AllorsBoolean = new AllorsEmbeddedObjectType(new Guid("b5ee6cea-4e2b-498e-a5dd-24671d896477"), typeof(global::System.Boolean), false , AllorsTypeTags.AllorsBoolean );
 
-		/// <summary>
-		/// The AllorsDateTime Object Type.
-		/// </summary>
-		public static AllorsEmbeddedObjectType AllorsDateTime = new AllorsEmbeddedObjectType(new Guid("c4c09343-61d3-418c-ade2-fe6fd588f128"), typeof(global::Allors.R1.Meta.AllorsDateTime), false , AllorsTypeTags.AllorsDateTime );
 
 		/// <summary>
 		/// The AllorsUnique Object Type.
@@ -1307,7 +1297,6 @@ namespace Allors.R1.Meta.AllorsGenerated
 			TypeById[AllorsDecimal.Id] = AllorsDecimal;
 			TypeById[AllorsDouble.Id] = AllorsDouble;
 			TypeById[AllorsBoolean.Id] = AllorsBoolean;
-			TypeById[AllorsDateTime.Id] = AllorsDateTime;
 			TypeById[AllorsUnique.Id] = AllorsUnique;
 			TypeById[AllorsBinary.Id] = AllorsBinary;
 

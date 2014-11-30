@@ -35,15 +35,6 @@ namespace Allors.R1.Meta
         /// </returns>
         public abstract ObjectType GetObjectType();
 
-        /// <summary>
-        /// Get the value of the property on this object.
-        /// </summary>
-        /// <param name="strategy">
-        /// The strategy.
-        /// </param>
-        /// <returns>
-        /// The operand value.
-        /// </returns>
-        public abstract object Get(IStrategy strategy);
+       
     }
 }

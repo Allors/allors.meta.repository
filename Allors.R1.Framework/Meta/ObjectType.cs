@@ -129,16 +129,7 @@ namespace Allors.R1.Meta
         /// <value>The double roles.</value>
         public RoleType[] DoubleRoleTypes
         {
-            get { return this.GetUnitRoleTypes(UnitTypeTags.AllorsDouble); }
-        }
-
-        /// <summary>
-        /// Gets the date time role types.
-        /// </summary>
-        /// <value>The date time role types.</value>
-        public RoleType[] DateTimeRoleTypes
-        {
-            get { return this.GetUnitRoleTypes(UnitTypeTags.AllorsDateTime); }
+            get { return this.GetUnitRoleTypes(UnitTypeTags.AllorsFloat); }
         }
 
         /// <summary>
@@ -158,16 +149,7 @@ namespace Allors.R1.Meta
         {
             get { return this.GetUnitRoleTypes(UnitTypeTags.AllorsInteger); }
         }
-
-        /// <summary>
-        /// Gets the integer64 roles.
-        /// </summary>
-        /// <value>The integer64 roles.</value>
-        public RoleType[] Integer64Roles
-        {
-            get { return this.GetUnitRoleTypes(UnitTypeTags.AllorsLong); }
-        }
-
+        
         /// <summary>
         /// Gets the string roles.
         /// </summary>
@@ -541,17 +523,6 @@ namespace Allors.R1.Meta
         }
 
         /// <summary>
-        /// Gets a value indicating whether this instance is a date time.
-        /// </summary>
-        /// <value>
-        ///  <c>true</c> if this instance is a date time; otherwise, <c>false</c>.
-        /// </value>
-        public bool IsDateTime
-        {
-            get { return this.Id.Equals(UnitTypeIds.DatetimeId); }
-        }
-
-        /// <summary>
         /// Gets a value indicating whether this instance is a decimal.
         /// </summary>
         /// <value>
@@ -634,7 +605,7 @@ namespace Allors.R1.Meta
         /// <value><c>true</c> if this instance is a double; otherwise, <c>false</c>.</value>
         public bool IsDouble
         {
-            get { return this.Id.Equals(UnitTypeIds.DoubleId); }
+            get { return this.Id.Equals(UnitTypeIds.FloatId); }
         }
 
         /// <summary>
@@ -667,15 +638,6 @@ namespace Allors.R1.Meta
 
                 this.Domain.StaleObjectTypeDerivations();
             }
-        }
-
-        /// <summary>
-        /// Gets a value indicating whether this instance is long.
-        /// </summary>
-        /// <value><c>true</c> if this instance is a long; otherwise, <c>false</c>.</value>
-        public bool IsLong
-        {
-            get { return this.Id.Equals(UnitTypeIds.LongId); }
         }
 
         /// <summary>
@@ -765,7 +727,7 @@ namespace Allors.R1.Meta
         /// <value><c>true</c> if this instance is a unique; otherwise, <c>false</c>.</value>
         public bool IsUnique
         {
-            get { return this.Id.Equals(UnitTypeIds.Unique); }
+            get { return this.Id.Equals(UnitTypeIds.UniqueId); }
         }
 
         /// <summary>

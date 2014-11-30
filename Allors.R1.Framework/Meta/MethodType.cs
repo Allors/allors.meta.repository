@@ -216,20 +216,5 @@ namespace Allors.R1.Meta
         {
             this.Domain.StaleMethodTypeDerivations();
         }
-
-        /// <summary>
-        /// Get the <see cref="MethodInfo"/> from the MethodType for this object.
-        /// </summary>
-        /// <param name="objectBase">
-        /// The object.
-        /// </param>
-        /// <returns>
-        /// The <see cref="MethodInfo"/>.
-        /// </returns>
-        private MethodInfo GetMethodInfo(ObjectBase objectBase)
-        {
-            var methodInfo = objectBase.GetType().GetMethod(this.Name);
-            return methodInfo;
-        }
     }
 }

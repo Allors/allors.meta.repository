@@ -384,13 +384,11 @@ namespace Allors.R1.Meta.Static
         {
             this.BinaryType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.BinaryId);
             this.BooleanType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.BooleanId);
-            this.DateTimeType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.DatetimeId);
             this.DecimalType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.DecimalId);
-            this.DoubleType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.DoubleId);
+            this.DoubleType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.FloatId);
             this.IntegerType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.IntegerId);
-            this.LongType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.LongId);
             this.StringType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.StringId);
-            this.UniqueType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.Unique);
+            this.UniqueType = (ObjectType)this.Domain.Domain.Find(UnitTypeIds.UniqueId);
         }
     }
 }
